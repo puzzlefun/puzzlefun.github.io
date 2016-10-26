@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Project | puzzle4fun</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="工程管理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Project">
+<meta property="og:url" content="https://puzzlefun.github.io/2016/01/20/Project/index.html">
+<meta property="og:site_name" content="puzzle4fun">
+<meta property="og:description" content="工程管理">
+<meta property="og:updated_time" content="2016-10-26T04:51:59.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Project">
+<meta name="twitter:description" content="工程管理">
+  
+    <link rel="alternate" href="/atom.xml" title="puzzle4fun" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">puzzle4fun</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">「Stay hungry. Stay foolish.」</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://puzzlefun.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Project" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/01/20/Project/" class="article-date">
+  <time datetime="2016-01-20T03:24:12.000Z" itemprop="datePublished">2016-01-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Project
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h2 id="workspace"><a href="#workspace" class="headerlink" title="workspace"></a>workspace</h2><p>A workspace is an Xcode document that groups projects and other documents so you can work on them together. A workspace can contain any number of Xcode projects, plus any other files you want to include. In addition to organizing all the files in each Xcode project, a workspace provides implicit and explicit relationships among the included projects and their targets.<br>tip:Projects in a Workspace Share a Build Directory</p>
+<h2 id="project"><a href="#project" class="headerlink" title="project"></a>project</h2><p>An Xcode project is a repository for all the files, resources, and information required to build one or more software products. A project contains all the elements used to build your products and maintains the relationships between those elements. It contains one or more targets, which specify how to build products. A project defines default build settings for all the targets in the project (each target can also specify its own build settings, which override the project build settings).</p>
+<h2 id="target"><a href="#target" class="headerlink" title="target"></a>target</h2><p>A target specifies a product to build and contains the instructions for building the product from a set of files in a project or workspace. A target defines a single product; it organizes the inputs into the build system—the source files and instructions for processing those source files—required to build that product. Projects can contain one or more targets, each of which produces one product.</p>
+<h2 id="scheme"><a href="#scheme" class="headerlink" title="scheme"></a>scheme</h2><p>An Xcode scheme defines a collection of targets to build, a configuration to use when building, and a collection of tests to execute.</p>
+<h2 id="configure"><a href="#configure" class="headerlink" title="configure"></a>configure</h2><p>A build setting is a variable that contains information about how a particular aspect of a product’s build process should be performed. For example, the information in a build setting can specify which options Xcode passes to the compiler.</p>
+<p>You can specify build settings at the project or target level. Each project-level build setting applies to all targets in the project unless explicitly overridden by the build settings for a specific target.</p>
+<h2 id="xcodebuild"><a href="#xcodebuild" class="headerlink" title="xcodebuild"></a>xcodebuild</h2><p>Usage: xcodebuild [-project <projectname>] [[-target <targetname>]…|-alltargets] [-configuration <configurationname>] [-arch <architecture>]… [-sdk [<sdkname>|<sdkpath>]] [-showBuildSettings] [<buildsetting>=<value>]… [<buildaction>]…<br>       xcodebuild [-project <projectname>] -scheme <schemename> [-destination <destinationspecifier>]… [-configuration <configurationname>] [-arch <architecture>]… [-sdk [<sdkname>|<sdkpath>]] [-showBuildSettings] [<buildsetting>=<value>]… [<buildaction>]…<br>       xcodebuild -workspace <workspacename> -scheme <schemename> [-destination <destinationspecifier>]… [-configuration <configurationname>] [-arch <architecture>]… [-sdk [<sdkname>|<sdkpath>]] [-showBuildSettings] [<buildsetting>=<value>]… [<buildaction>]…<br>       xcodebuild -version [-sdk [<sdkfullpath>|<sdkname>] [<infoitem>] ]<br>       xcodebuild -list [[-project <projectname>]|[-workspace <workspacename>]]<br>       xcodebuild -showsdks<br>       xcodebuild -exportArchive -archivePath <xcarchivepath> -exportPath <destinationpath> -exportOptionsPlist <plistpath><br>       xcodebuild -exportLocalizations -localizationPath <path></path> -project <projectname> [-exportLanguage <targetlanguage>…]<br>       xcodebuild -importLocalizations -localizationPath <path></path> -project <projectname></projectname></targetlanguage></projectname></plistpath></destinationpath></xcarchivepath></workspacename></projectname></infoitem></sdkname></sdkfullpath></buildaction></value></buildsetting></sdkpath></sdkname></architecture></configurationname></destinationspecifier></schemename></workspacename></buildaction></value></buildsetting></sdkpath></sdkname></architecture></configurationname></destinationspecifier></schemename></projectname></buildaction></value></buildsetting></sdkpath></sdkname></architecture></configurationname></targetname></projectname></p>
+<h2 id="xctool"><a href="#xctool" class="headerlink" title="xctool"></a>xctool</h2><p>usage: xctool [BASE OPTIONS] [ACTION [ACTION ARGUMENTS]] …</p>
+<h2 id="command"><a href="#command" class="headerlink" title="command"></a>command</h2><p>sed<br>/usr/libexec/PlistBuddy</p>
+<h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2><ul>
+<li><a href="https://developer.apple.com/library/ios/featuredarticles/XcodeConcepts/Concept-Targets.html" target="_blank" rel="external">https://developer.apple.com/library/ios/featuredarticles/XcodeConcepts/Concept-Targets.html</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://puzzlefun.github.io/2016/01/20/Project/" data-id="ciuqjbrjf00062os6jji9zmmw" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Xcode/">Xcode</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/01/21/dependency/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Dependency
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/01/18/encode-decode/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">encode-decode</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Dictionary/">Dictionary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/">Tool</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Apple/">Apple</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Crash/">Crash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GCC/">GCC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/">GitHub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Objective/">Objective</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Objective-C/">Objective-C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SKView/">SKView</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SVN/">SVN</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Security/">Security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TV/">TV</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UIView/">UIView</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xcode/">Xcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iPad/">iPad</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iPhone/">iPhone</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iWatch/">iWatch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lldb/">lldb</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/C/" style="font-size: 10px;">C++</a> <a href="/tags/Crash/" style="font-size: 10px;">Crash</a> <a href="/tags/GCC/" style="font-size: 10px;">GCC</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/Objective/" style="font-size: 10px;">Objective</a> <a href="/tags/Objective-C/" style="font-size: 15px;">Objective-C</a> <a href="/tags/SKView/" style="font-size: 10px;">SKView</a> <a href="/tags/SVN/" style="font-size: 10px;">SVN</a> <a href="/tags/Security/" style="font-size: 10px;">Security</a> <a href="/tags/TV/" style="font-size: 10px;">TV</a> <a href="/tags/UIView/" style="font-size: 10px;">UIView</a> <a href="/tags/Xcode/" style="font-size: 15px;">Xcode</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/iPad/" style="font-size: 10px;">iPad</a> <a href="/tags/iPhone/" style="font-size: 10px;">iPhone</a> <a href="/tags/iWatch/" style="font-size: 10px;">iWatch</a> <a href="/tags/lldb/" style="font-size: 10px;">lldb</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/10/26/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/21/iOS-remote-debug/">构建iOS 远程调试环境</a>
+          </li>
+        
+          <li>
+            <a href="/2016/08/29/beign-php/">beign-php</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/11/compile/">The Compiler is Mine Friend</a>
+          </li>
+        
+          <li>
+            <a href="/2016/03/16/xcode/">Xcode</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 carlhuting<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

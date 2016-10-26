@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>本站搭建小结 | puzzle4fun</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="记录搭建的过程。老师说： ”好记性不如烂笔头“。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="本站搭建小结">
+<meta property="og:url" content="https://puzzlefun.github.io/2015/09/09/begin/index.html">
+<meta property="og:site_name" content="puzzle4fun">
+<meta property="og:description" content="记录搭建的过程。老师说： ”好记性不如烂笔头“。">
+<meta property="og:updated_time" content="2016-10-26T04:51:59.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="本站搭建小结">
+<meta name="twitter:description" content="记录搭建的过程。老师说： ”好记性不如烂笔头“。">
+  
+    <link rel="alternate" href="/atom.xml" title="puzzle4fun" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">puzzle4fun</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">「Stay hungry. Stay foolish.」</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://puzzlefun.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-begin" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/09/09/begin/" class="article-date">
+  <time datetime="2015-09-08T16:00:00.000Z" itemprop="datePublished">2015-09-09</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Tool/">Tool</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      本站搭建小结
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本小站采用 <a href="http://hexo.io/" target="_blank" rel="external">hexo</a> 结合[githubpage]搭建,hexo资料：</p>
+<ul>
+<li><a href="http://hexo.io/docs/" target="_blank" rel="external">文档</a> </li>
+<li><a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> </li>
+<li><a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a><a id="more"></a>
+约定当前路径：项目所在根目录</li>
+</ul>
+<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><p>前置条件</p>
+<ul>
+<li><a href="https://nodejs.org/" target="_blank" rel="external">Node.js</a></li>
+<li><a href="http://git-scm.com/" target="_blank" rel="external">Git</a></li>
+</ul>
+<p>安装hexo</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo --no-optional</div></pre></td></tr></table></figure>
+<h2 id="常用hexo-命令"><a href="#常用hexo-命令" class="headerlink" title="常用hexo 命令"></a>常用hexo 命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ hexo init [path] 			<span class="comment"># 初始化一个项目</span></div><div class="line">$ hexo new <span class="string">"My New Post"</span> 	<span class="comment"># 新建一篇博文</span></div><div class="line">$ hexo server 				<span class="comment"># 本地调试</span></div><div class="line">$ hexo generate				<span class="comment"># 生成HTML</span></div><div class="line">$ hexo deploy 				<span class="comment"># 部署到远程服务器</span></div></pre></td></tr></table></figure>
+<p>======<br>. 代表初始化项目的根目录<br>项目的全局配置文件 ./_config.yml<br>主题的配置文件 ./theme/(themename)/_config.yml</p>
+<h2 id="全局配置"><a href="#全局配置" class="headerlink" title="全局配置"></a>全局配置</h2><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div></pre></td><td class="code"><pre><div class="line"># Hexo Configuration</div><div class="line">## Docs: https://hexo.io/docs/configuration.html</div><div class="line">## Source: https://github.com/hexojs/hexo/</div><div class="line"></div><div class="line"># Site</div><div class="line">title: Puzzlefun</div><div class="line">subtitle: stay hungry stay foolish</div><div class="line">description: 学习iOS笔记，分享自己的学习路程，记录脚下的每一个脚印</div><div class="line">author: invokefear</div><div class="line">language: zh-CN</div><div class="line">timezone: </div><div class="line"></div><div class="line"># URL</div><div class="line">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</div><div class="line">url: puzzlefun.github.io</div><div class="line">root: /</div><div class="line">permalink: :year/:month/:day/:title/</div><div class="line">permalink_defaults:</div><div class="line"></div><div class="line"># Directory</div><div class="line">source_dir: source</div><div class="line">public_dir: public</div><div class="line">tag_dir: tags</div><div class="line">archive_dir: archives</div><div class="line">category_dir: categories</div><div class="line">code_dir: downloads/code</div><div class="line">i18n_dir: :lang</div><div class="line">skip_render:</div><div class="line"></div><div class="line"># Writing</div><div class="line">new_post_name: :title.md # File name of new posts</div><div class="line">default_layout: post</div><div class="line">titlecase: false # Transform title into titlecase</div><div class="line">external_link: true # Open external links in new tab</div><div class="line">filename_case: 0</div><div class="line">render_drafts: false</div><div class="line">post_asset_folder: false</div><div class="line">relative_link: false</div><div class="line">future: true</div><div class="line">highlight:</div><div class="line">  enable: true</div><div class="line">  line_number: true</div><div class="line">  auto_detect: false</div><div class="line">  tab_replace:</div><div class="line"></div><div class="line"># Category &amp; Tag</div><div class="line">default_category: uncategorized</div><div class="line">category_map:</div><div class="line">tag_map:</div><div class="line"></div><div class="line"># Date / Time format</div><div class="line">## Hexo uses Moment.js to parse and display date</div><div class="line">## You can customize the date format as defined in</div><div class="line">## http://momentjs.com/docs/#/displaying/format/</div><div class="line">date_format: YYYY-MM-DD</div><div class="line">time_format: HH:mm:ss</div><div class="line"></div><div class="line"># Pagination</div><div class="line">## Set per_page to 0 to disable pagination</div><div class="line">per_page: 10</div><div class="line">pagination_dir: page</div><div class="line"></div><div class="line"># Extensions</div><div class="line">## Plugins: https://hexo.io/plugins/</div><div class="line">## Themes: https://hexo.io/themes/</div><div class="line">theme: freemind</div><div class="line"></div><div class="line"># Deployment</div><div class="line">## Docs: https://hexo.io/docs/deployment.html</div><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: https://github.com/puzzlefun/puzzlefun.github.io.git</div><div class="line">  </div><div class="line">feed:</div><div class="line">  type: atom</div><div class="line">  path: atom.xml</div><div class="line">  limit: 20</div><div class="line">  hub:</div><div class="line"></div><div class="line">## https://github.com/PaicHyperionDev/hexo-generator-search</div><div class="line">search:</div><div class="line">  path: search.xml</div><div class="line">  field: post</div></pre></td></tr></table></figure>
+<h3 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h3><p>下载主题<br>e.g <a href="https://github.com/wzpan/hexo-theme-freemind.git" target="_blank" rel="external">freemind</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> theme/</div><div class="line">$ git <span class="built_in">clone</span> https://github.com/wzpan/hexo-theme-freemind.git themes/freemind</div><div class="line">$ npm install hexo-tag-bootstrap --save</div></pre></td></tr></table></figure>
+<p>在全局配置文件_config.yml 中Extension节中设置<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">theme: freemind</div></pre></td></tr></table></figure></p>
+<p>hexo <a href="http://hexo.io/themes/" target="_blank" rel="external">theme</a>提供了多种主题</p>
+<h2 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h2><p>本站采用的主题为 freemind<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">slogan: "好好学习 天天向上"</div><div class="line"></div><div class="line">theme: false</div><div class="line">inverse: false</div><div class="line"></div><div class="line">menu:</div><div class="line">  - title: Archives</div><div class="line">    url: archives</div><div class="line">    intro: "All the articles."</div><div class="line">    icon: "fa fa-archive"</div><div class="line">  - title: Categories</div><div class="line">    url: categories</div><div class="line">    intro: "All the categories."</div><div class="line">    icon: "fa fa-folder"</div><div class="line">  - title: Tags</div><div class="line">    url: tags</div><div class="line">    intro: "All the tags."</div><div class="line">    icon: "fa fa-tags"</div><div class="line">  - title: About</div><div class="line">    url: about</div><div class="line">    intro: "About me."</div><div class="line">    icon: "fa fa-user"</div><div class="line"></div><div class="line">links:</div><div class="line">  - title: "Puzzle4fun"</div><div class="line">    url: https://github.com/puzzlefun</div><div class="line">    intro: "My Github account."</div><div class="line">    icon: "fa fa-github"</div><div class="line">  - title: "My LinkedIn"</div><div class="line">    url: https://cn.linkedin.com/in/carl-liu-337796a2</div><div class="line">    intro: "My Linkin account."</div><div class="line">    icon: "fa fa-linkedin"</div><div class="line"></div><div class="line">widgets:</div><div class="line">- search</div><div class="line">- category</div><div class="line">- tagcloud</div><div class="line">- recent_posts  </div><div class="line">- links</div><div class="line"></div><div class="line">rss: atom.xml</div><div class="line">fancybox: true</div><div class="line">favicon: favicon.png</div><div class="line">duoshuo_shortname: puzzlefun</div><div class="line"></div><div class="line"># Analytics</div><div class="line">google_analytics:</div><div class="line">  enable: false</div><div class="line">  siteid:</div><div class="line">baidu_tongji:</div><div class="line">  enable: true</div><div class="line">  siteid: e358945bd22b2347e568dd59e2f62845</div><div class="line"></div><div class="line"># search</div><div class="line"># swiftype_key: ZP2ZSuHgipSZfRyU8uTR</div><div class="line"></div><div class="line"># share widgets</div><div class="line">bdshare: true</div><div class="line">jiathis: false</div></pre></td></tr></table></figure></p>
+<h3 id="添加-网站统计"><a href="#添加-网站统计" class="headerlink" title="添加 网站统计"></a>添加 网站统计</h3><p>e.g <a href="http://tongji.baidu.com/" target="_blank" rel="external">百度统计</a>创建一个网站统计id</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">baidu_tongji:</div><div class="line">  enable: true</div><div class="line">  siteid: [your baidu tongji id]</div></pre></td></tr></table></figure>
+<p> 该配置会在主题的layout中增加统计的代码，根据自己的需要可以适当的</p>
+<h3 id="添加-多说评论"><a href="#添加-多说评论" class="headerlink" title="添加 多说评论"></a>添加 多说评论</h3><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><ul>
+<li><a href="http://baoxiehao.com/2014/05/17/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/" target="_blank" rel="external">http://baoxiehao.com/2014/05/17/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/</a></li>
+<li><a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">http://hexo.io/docs/deployment.html</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://puzzlefun.github.io/2015/09/09/begin/" data-id="ciuqjbrjp000f2os6ph8xugd7" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GitHub/">GitHub</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/09/15/load/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          + load and + initialize
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Dictionary/">Dictionary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/">Tool</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Apple/">Apple</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Crash/">Crash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GCC/">GCC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/">GitHub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Objective/">Objective</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Objective-C/">Objective-C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SKView/">SKView</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SVN/">SVN</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Security/">Security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TV/">TV</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UIView/">UIView</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xcode/">Xcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iPad/">iPad</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iPhone/">iPhone</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iWatch/">iWatch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lldb/">lldb</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/C/" style="font-size: 10px;">C++</a> <a href="/tags/Crash/" style="font-size: 10px;">Crash</a> <a href="/tags/GCC/" style="font-size: 10px;">GCC</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/Objective/" style="font-size: 10px;">Objective</a> <a href="/tags/Objective-C/" style="font-size: 15px;">Objective-C</a> <a href="/tags/SKView/" style="font-size: 10px;">SKView</a> <a href="/tags/SVN/" style="font-size: 10px;">SVN</a> <a href="/tags/Security/" style="font-size: 10px;">Security</a> <a href="/tags/TV/" style="font-size: 10px;">TV</a> <a href="/tags/UIView/" style="font-size: 10px;">UIView</a> <a href="/tags/Xcode/" style="font-size: 15px;">Xcode</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/iPad/" style="font-size: 10px;">iPad</a> <a href="/tags/iPhone/" style="font-size: 10px;">iPhone</a> <a href="/tags/iWatch/" style="font-size: 10px;">iWatch</a> <a href="/tags/lldb/" style="font-size: 10px;">lldb</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/10/26/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/21/iOS-remote-debug/">构建iOS 远程调试环境</a>
+          </li>
+        
+          <li>
+            <a href="/2016/08/29/beign-php/">beign-php</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/11/compile/">The Compiler is Mine Friend</a>
+          </li>
+        
+          <li>
+            <a href="/2016/03/16/xcode/">Xcode</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 carlhuting<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

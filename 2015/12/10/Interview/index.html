@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Interview | puzzle4fun</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="反思在反思，学习iOS已经好一段时间了，不知道能不能找到工作，已是问问大牛一般面试都会考察一些什么问题。以下就是向大牛学习以及自己平时思考的问题。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Interview">
+<meta property="og:url" content="https://puzzlefun.github.io/2015/12/10/Interview/index.html">
+<meta property="og:site_name" content="puzzle4fun">
+<meta property="og:description" content="反思在反思，学习iOS已经好一段时间了，不知道能不能找到工作，已是问问大牛一般面试都会考察一些什么问题。以下就是向大牛学习以及自己平时思考的问题。">
+<meta property="og:updated_time" content="2016-10-26T04:51:59.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Interview">
+<meta name="twitter:description" content="反思在反思，学习iOS已经好一段时间了，不知道能不能找到工作，已是问问大牛一般面试都会考察一些什么问题。以下就是向大牛学习以及自己平时思考的问题。">
+  
+    <link rel="alternate" href="/atom.xml" title="puzzle4fun" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">puzzle4fun</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">「Stay hungry. Stay foolish.」</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://puzzlefun.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Interview" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/12/10/Interview/" class="article-date">
+  <time datetime="2015-12-10T01:58:51.000Z" itemprop="datePublished">2015-12-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/iOS/">iOS</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Interview
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>面试的过程除了考察项目经历外，还会着重考察基础知识<br>程序员面试除了问问数据结构、算法还能问点什么呢？</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h3 id="1-Objective-C-的内存管理模型？"><a href="#1-Objective-C-的内存管理模型？" class="headerlink" title="1 Objective-C 的内存管理模型？"></a>1 Objective-C 的内存管理模型？</h3><p>MRC(retain, realse) ==》 ARC(strong, weak, copy, assign)<br>引用计数模型</p>
+<h3 id="2-autorealse"><a href="#2-autorealse" class="headerlink" title="2 autorealse"></a>2 autorealse</h3><h3 id="3-NSString-变量的赋值-是否共用同一份内存"><a href="#3-NSString-变量的赋值-是否共用同一份内存" class="headerlink" title="3 NSString 变量的赋值 是否共用同一份内存"></a>3 NSString 变量的赋值 是否共用同一份内存</h3><p>NSString &amp;&amp; NSMutabeString<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">#import &lt;Foundation/Foundation.h&gt;</div><div class="line"></div><div class="line">int main(int argc, const char * argv[]) &#123;</div><div class="line">    @autoreleasepool &#123;</div><div class="line">        </div><div class="line">        NSString *hello = @&quot;hello world&quot;;</div><div class="line">        NSString *world = hello;</div><div class="line">        NSLog(@&quot;1. %p =? %p&quot;, hello, world);</div><div class="line">        NSString *hi = @&quot;hello world&quot;;</div><div class="line">        NSLog(@&quot;2. %p =? %p&quot;,hello, hi);</div><div class="line">        NSString *hei = [NSString stringWithFormat:@&quot;%@&quot;, @&quot;hello world&quot;]; </div><div class="line">        NSLog(@&quot;3. %p =? %p&quot;, hello, hei); //采用类实例化的常量字符串是不同的对象</div><div class="line">        </div><div class="line">        NSMutableString *mutableHello = [NSMutableString stringWithString:hello];</div><div class="line">        NSLog(@&quot;4. %p =? %p&quot;, hello, mutableHello);</div><div class="line">        NSString *hellocopy = [hello copy];</div><div class="line">        NSLog(@&quot;5. %p =? %p&quot;, hello, hellocopy); //同一个对象的两份引用</div><div class="line">        NSMutableString *helloMutableCopy = [hello mutableCopy];</div><div class="line">        NSLog(@&quot;6. %p =? %p&quot;, hello, helloMutableCopy); //终于产生新对象了</div><div class="line">        </div><div class="line">        NSString *mutableHelloCopy = [mutableHello copy];</div><div class="line">        NSLog(@&quot;7. %p =? %p&quot;, mutableHello, mutableHelloCopy); //我们都是新对象</div><div class="line">        NSString *mutableHelloMutableCopy = [mutableHello mutableCopy];</div><div class="line">        NSLog(@&quot;8. %p =? %p&quot;, mutableHello, mutableHelloMutableCopy); //我们都是新对象</div><div class="line">        </div><div class="line">    &#125;</div><div class="line">    return 0;</div><div class="line">&#125;</div><div class="line"></div><div class="line">/*</div><div class="line">2015-12-10 10:32:32.098 Interview[3940:264604] 1. 0x100001048 =? 0x100001048</div><div class="line">2015-12-10 10:32:32.099 Interview[3940:264604] 2. 0x100001048 =? 0x100001048</div><div class="line">2015-12-10 10:32:32.099 Interview[3940:264604] 3. 0x100001048 =? 0x1007000e0</div><div class="line">2015-12-10 10:32:32.099 Interview[3940:264604] 4. 0x100001048 =? 0x1007000a0</div><div class="line">2015-12-10 10:32:32.099 Interview[3940:264604] 5. 0x100001048 =? 0x100001048</div><div class="line">2015-12-10 10:32:32.099 Interview[3940:264604] 6. 0x100001048 =? 0x1007002a0</div><div class="line">2015-12-10 10:32:32.099 Interview[3940:264604] 7. 0x1007000a0 =? 0x1001067f0</div><div class="line">2015-12-10 10:32:32.099 Interview[3940:264604] 8. 0x1007000a0 =? 0x100106810</div><div class="line">Program ended with exit code: 0</div><div class="line">*/</div></pre></td></tr></table></figure></p>
+<p>NSArrary &amp;&amp; NSMutableArrary<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">#import &lt;Foundation/Foundation.h&gt;</div><div class="line"></div><div class="line">int main(int argc, const char * argv[]) &#123;</div><div class="line">    @autoreleasepool &#123;</div><div class="line">        NSArray * array = @[@1, @2];</div><div class="line">        NSArray * arrayCopy = [array copy];</div><div class="line">        NSArray * arrayMutableCopy = [array mutableCopy];</div><div class="line">        NSArray * arrayDeepCopy = [[NSArray alloc] initWithArray:array copyItems:YES];</div><div class="line">        NSLog(@&quot; array = %p&quot;,array);</div><div class="line">        NSLog(@&quot; arrayCopy = %p&quot;,arrayCopy); // I am s shadow</div><div class="line">        NSLog(@&quot; arrayMutableCopy = %p&quot;,arrayMutableCopy);</div><div class="line">        NSLog(@&quot; arrayDeepCopy = %p&quot;,arrayDeepCopy);</div><div class="line">        </div><div class="line">        NSMutableArray * mutableArray = [NSMutableArray arrayWithArray:array];</div><div class="line">        NSMutableArray * mutableArrayCopy = [array copy];</div><div class="line">        NSMutableArray * mutableArrayMutableCopy = [array mutableCopy];</div><div class="line">        NSMutableArray * mutableArrayDeepCopy = [[NSMutableArray alloc] initWithArray:array copyItems:YES];</div><div class="line">        NSLog(@&quot; mutableArray = %p&quot;,mutableArray);</div><div class="line">        NSLog(@&quot; mutableArrayCopy = %p&quot;,mutableArrayCopy);</div><div class="line">        NSLog(@&quot; mutableArrayMutableCopy = %p&quot;,mutableArrayMutableCopy);</div><div class="line">        NSLog(@&quot; mutableArrayDeepCopy = %p&quot;,mutableArrayDeepCopy);</div><div class="line">    &#125;</div><div class="line">    return 0;</div><div class="line">&#125;</div><div class="line">/*</div><div class="line">2015-12-10 14:15:44.061 Interview[4386:341668]  array = 0x100106d30</div><div class="line">2015-12-10 14:15:44.062 Interview[4386:341668]  arrayCopy = 0x100106d30</div><div class="line">2015-12-10 14:15:44.062 Interview[4386:341668]  arrayMutableCopy = 0x1001069f0</div><div class="line">2015-12-10 14:15:44.062 Interview[4386:341668]  arrayDeepCopy = 0x100106da0</div><div class="line">2015-12-10 14:15:44.063 Interview[4386:341668]  mutableArray = 0x100201490</div><div class="line">2015-12-10 14:15:44.063 Interview[4386:341668]  mutableArrayCopy = 0x100106d30</div><div class="line">2015-12-10 14:15:44.063 Interview[4386:341668]  mutableArrayMutableCopy = 0x100203d80</div><div class="line">2015-12-10 14:15:44.063 Interview[4386:341668]  mutableArrayDeepCopy = 0x1002037f0</div><div class="line">Program ended with exit code: 0</div><div class="line">*/</div></pre></td></tr></table></figure></p>
+<p>NSDictionary &amp;&amp; NSMutableDictionary</p>
+<h3 id="4-copy-属性的作用"><a href="#4-copy-属性的作用" class="headerlink" title="4 copy 属性的作用"></a>4 copy 属性的作用</h3><h3 id="5-什么是runtime"><a href="#5-什么是runtime" class="headerlink" title="5 什么是runtime"></a>5 什么是runtime</h3><p>面向对象  动态语言 消息传递</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">OBJC_EXPORT void objc_msgSend(void /* id self, SEL op, ... */ )</div><div class="line">    __OSX_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);</div><div class="line">	</div><div class="line">+ (BOOL)resolveClassMethod:(SEL)sel __OSX_AVAILABLE_STARTING(__MAC_10_5, __IPHONE_2_0);</div><div class="line">+ (BOOL)resolveInstanceMethod:(SEL)sel __OSX_AVAILABLE_STARTING(__MAC_10_5, __IPHONE_2_0);</div><div class="line"></div><div class="line">- (id)forwardingTargetForSelector:(SEL)aSelector __OSX_AVAILABLE_STARTING(__MAC_10_5, __IPHONE_2_0);</div><div class="line"></div><div class="line">- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector OBJC_SWIFT_UNAVAILABLE(&quot;&quot;);</div></pre></td></tr></table></figure>
+<p>程序的执行逻辑在运行时 动态绑定</p>
+<h3 id="6-什么情况下产生引用循环，以及如何避免"><a href="#6-什么情况下产生引用循环，以及如何避免" class="headerlink" title="6 什么情况下产生引用循环，以及如何避免"></a>6 什么情况下产生引用循环，以及如何避免</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">#import &lt;Foundation/Foundation.h&gt;</div><div class="line"></div><div class="line">@interface AObject : NSObject</div><div class="line">- (void)setupEnv;</div><div class="line">@end</div><div class="line"></div><div class="line">@protocol CDelegate &lt;NSObject&gt;</div><div class="line">@optional</div><div class="line">- (void)sayhello;</div><div class="line">@end</div><div class="line"></div><div class="line">@interface BObject : NSObject</div><div class="line">@property (nonatomic, strong) id&lt;CDelegate&gt; delegate;</div><div class="line">@end</div><div class="line"></div><div class="line">@interface AObject () &lt;CDelegate&gt;</div><div class="line">@property (nonatomic, strong) BObject *b;</div><div class="line">@property (nonatomic, copy) void (^hi)();</div><div class="line">@property (nonatomic, copy) NSString *name;</div><div class="line">@end</div><div class="line"></div><div class="line">@implementation AObject</div><div class="line"></div><div class="line">- (void)setupEnv &#123;</div><div class="line">    self.b = [[BObject alloc] init];</div><div class="line">    self.b.delegate = self; // cycle one</div><div class="line">    self.name = @&quot;hello world&quot;;</div><div class="line">    __weak typeof(self) weakSelf = self; //什么时候可能导致weakSelf == nil ?</div><div class="line">    self.hi = ^() &#123;</div><div class="line">        NSLog(@&quot;slef == %@&quot;, weakSelf); // cycle two?</div><div class="line">        NSLog(@&quot;%@&quot;, weakSelf.name);</div><div class="line">    &#125;;   </div><div class="line">&#125;</div><div class="line">@end</div></pre></td></tr></table></figure>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p>【1】<a href="http://stackoverflow.com/questions/27152580/cocoa-blocks-as-strong-pointers-vs-copy" target="_blank" rel="external">http://stackoverflow.com/questions/27152580/cocoa-blocks-as-strong-pointers-vs-copy</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://puzzlefun.github.io/2015/12/10/Interview/" data-id="ciuqjbrj100002os6a40qvfjv" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Objective-C/">Objective-C</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/12/11/generic/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Generic
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/12/02/initializaerStruct/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">InitializaerStruct</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Dictionary/">Dictionary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/">Tool</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Apple/">Apple</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Crash/">Crash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GCC/">GCC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/">GitHub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Objective/">Objective</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Objective-C/">Objective-C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SKView/">SKView</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SVN/">SVN</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Security/">Security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TV/">TV</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UIView/">UIView</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xcode/">Xcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iPad/">iPad</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iPhone/">iPhone</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iWatch/">iWatch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lldb/">lldb</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/C/" style="font-size: 10px;">C++</a> <a href="/tags/Crash/" style="font-size: 10px;">Crash</a> <a href="/tags/GCC/" style="font-size: 10px;">GCC</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/Objective/" style="font-size: 10px;">Objective</a> <a href="/tags/Objective-C/" style="font-size: 15px;">Objective-C</a> <a href="/tags/SKView/" style="font-size: 10px;">SKView</a> <a href="/tags/SVN/" style="font-size: 10px;">SVN</a> <a href="/tags/Security/" style="font-size: 10px;">Security</a> <a href="/tags/TV/" style="font-size: 10px;">TV</a> <a href="/tags/UIView/" style="font-size: 10px;">UIView</a> <a href="/tags/Xcode/" style="font-size: 15px;">Xcode</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/iPad/" style="font-size: 10px;">iPad</a> <a href="/tags/iPhone/" style="font-size: 10px;">iPhone</a> <a href="/tags/iWatch/" style="font-size: 10px;">iWatch</a> <a href="/tags/lldb/" style="font-size: 10px;">lldb</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/10/26/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/21/iOS-remote-debug/">构建iOS 远程调试环境</a>
+          </li>
+        
+          <li>
+            <a href="/2016/08/29/beign-php/">beign-php</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/11/compile/">The Compiler is Mine Friend</a>
+          </li>
+        
+          <li>
+            <a href="/2016/03/16/xcode/">Xcode</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 carlhuting<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

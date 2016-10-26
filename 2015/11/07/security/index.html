@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Security | puzzle4fun</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="利益，好奇都是对安全造成威胁的原因，本文对于原因不感兴趣，主要是介绍目前计算机科学中运用的信息安全技术。由于本人的知识有限，涉及不深，故在此抛砖引玉。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Security">
+<meta property="og:url" content="https://puzzlefun.github.io/2015/11/07/security/index.html">
+<meta property="og:site_name" content="puzzle4fun">
+<meta property="og:description" content="利益，好奇都是对安全造成威胁的原因，本文对于原因不感兴趣，主要是介绍目前计算机科学中运用的信息安全技术。由于本人的知识有限，涉及不深，故在此抛砖引玉。">
+<meta property="og:updated_time" content="2016-10-26T05:32:08.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Security">
+<meta name="twitter:description" content="利益，好奇都是对安全造成威胁的原因，本文对于原因不感兴趣，主要是介绍目前计算机科学中运用的信息安全技术。由于本人的知识有限，涉及不深，故在此抛砖引玉。">
+  
+    <link rel="alternate" href="/atom.xml" title="puzzle4fun" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">puzzle4fun</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">「Stay hungry. Stay foolish.」</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://puzzlefun.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-security" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/11/07/security/" class="article-date">
+  <time datetime="2015-11-07T10:53:13.000Z" itemprop="datePublished">2015-11-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Dictionary/">Dictionary</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Security
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h2 id="专有名词"><a href="#专有名词" class="headerlink" title="专有名词"></a>专有名词</h2><ul>
+<li>信息（information, message）：定义很多，建议查看维基百科，简单理解为信息是某个主体关注的东西。</li>
+<li>安全（security ）:</li>
+<li>centification authorization authentification audit<br>encrypt decrypt abstract<br>cryptogram</li>
+</ul>
+<h2 id="安全技术"><a href="#安全技术" class="headerlink" title="安全技术"></a>安全技术</h2><p>加密&lt;=&gt;解密<br>摘要算法 MD5 SHA<br>对称加密解密算法<br>DES<br>非对称加密解密算法<br>RSA<br>常用安全策略<br>常用安全协议<br>TSL SSL<br>数据结构<br>x.509 v3<br>安全组织结构<br>PKI<br>安全软件<br>openSSL</p>
+<h2 id="代码签名"><a href="#代码签名" class="headerlink" title="代码签名"></a>代码签名</h2><p>codesign<br>secutity<br>openssl<br>uzip<br>md5 / sha</p>
+<h3 id="查看可以使用的签名证书"><a href="#查看可以使用的签名证书" class="headerlink" title="查看可以使用的签名证书"></a>查看可以使用的签名证书</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">security find-identity -v -p codesiging</div></pre></td></tr></table></figure>
+<h3 id="查看mobilprovision"><a href="#查看mobilprovision" class="headerlink" title="查看mobilprovision"></a>查看mobilprovision</h3><p>security cms -D -i embedded.mobileprovision</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://puzzlefun.github.io/2015/11/07/security/" data-id="ciuqjbrkk001i2os63vfcu1ex" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Security/">Security</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/12/02/initializaerStruct/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          InitializaerStruct
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/10/30/media/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">media</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Dictionary/">Dictionary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/">Tool</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Apple/">Apple</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Crash/">Crash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GCC/">GCC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/">GitHub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Objective/">Objective</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Objective-C/">Objective-C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SKView/">SKView</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SVN/">SVN</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Security/">Security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TV/">TV</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UIView/">UIView</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xcode/">Xcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iPad/">iPad</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iPhone/">iPhone</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iWatch/">iWatch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lldb/">lldb</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/C/" style="font-size: 10px;">C++</a> <a href="/tags/Crash/" style="font-size: 10px;">Crash</a> <a href="/tags/GCC/" style="font-size: 10px;">GCC</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/Objective/" style="font-size: 10px;">Objective</a> <a href="/tags/Objective-C/" style="font-size: 15px;">Objective-C</a> <a href="/tags/SKView/" style="font-size: 10px;">SKView</a> <a href="/tags/SVN/" style="font-size: 10px;">SVN</a> <a href="/tags/Security/" style="font-size: 10px;">Security</a> <a href="/tags/TV/" style="font-size: 10px;">TV</a> <a href="/tags/UIView/" style="font-size: 10px;">UIView</a> <a href="/tags/Xcode/" style="font-size: 15px;">Xcode</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/iPad/" style="font-size: 10px;">iPad</a> <a href="/tags/iPhone/" style="font-size: 10px;">iPhone</a> <a href="/tags/iWatch/" style="font-size: 10px;">iWatch</a> <a href="/tags/lldb/" style="font-size: 10px;">lldb</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/10/26/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/21/iOS-remote-debug/">构建iOS 远程调试环境</a>
+          </li>
+        
+          <li>
+            <a href="/2016/08/29/beign-php/">beign-php</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/11/compile/">The Compiler is Mine Friend</a>
+          </li>
+        
+          <li>
+            <a href="/2016/03/16/xcode/">Xcode</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 carlhuting<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

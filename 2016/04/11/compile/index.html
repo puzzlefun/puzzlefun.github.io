@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>The Compiler is Mine Friend | puzzle4fun</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="充分利用编译为我们提供的便利，可以极大的改善我们的工作效率。我喜欢和大家交朋友，我相信朋友会在关键时候给我提示的。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Compiler is Mine Friend">
+<meta property="og:url" content="https://puzzlefun.github.io/2016/04/11/compile/index.html">
+<meta property="og:site_name" content="puzzle4fun">
+<meta property="og:description" content="充分利用编译为我们提供的便利，可以极大的改善我们的工作效率。我喜欢和大家交朋友，我相信朋友会在关键时候给我提示的。">
+<meta property="og:updated_time" content="2016-10-26T04:51:59.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="The Compiler is Mine Friend">
+<meta name="twitter:description" content="充分利用编译为我们提供的便利，可以极大的改善我们的工作效率。我喜欢和大家交朋友，我相信朋友会在关键时候给我提示的。">
+  
+    <link rel="alternate" href="/atom.xml" title="puzzle4fun" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">puzzle4fun</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">「Stay hungry. Stay foolish.」</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://puzzlefun.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-compile" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/04/11/compile/" class="article-date">
+  <time datetime="2016-04-11T08:48:22.000Z" itemprop="datePublished">2016-04-11</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Tool/">Tool</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      The Compiler is Mine Friend
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Apple-LLVM-compiler"><a href="#Apple-LLVM-compiler" class="headerlink" title="Apple LLVM compiler"></a>Apple LLVM compiler</h2><h3 id="Warning-Flag-语法"><a href="#Warning-Flag-语法" class="headerlink" title="Warning Flag 语法"></a>Warning Flag 语法</h3><ul>
+<li>-Wfoo 开启 foo，foo表示一类或者一组警告</li>
+<li>-Wno-foo 关闭 foo 警告</li>
+<li>-w 关闭所有的警告</li>
+</ul>
+<h3 id="设置-Warning-Errors"><a href="#设置-Warning-Errors" class="headerlink" title="设置 Warning = Errors"></a>设置 Warning = Errors</h3><p>//.xccongig<br>GCC_TREAT_WARNINGS_AS_ERRORS = YES<br>// cms-ling<br>-Werror</p>
+<h3 id="编译器给出的几类警告："><a href="#编译器给出的几类警告：" class="headerlink" title="编译器给出的几类警告："></a>编译器给出的几类警告：</h3><ul>
+<li>A valid issue =&gt; Fix the issue</li>
+<li>你不关心的，或者无意义的警告 =&gt; 关闭 局部或者全局 警告</li>
+<li>你不理解的警告 =&gt; 弄明白，否者你永远不明白</li>
+</ul>
+<h3 id="常见的警告组合"><a href="#常见的警告组合" class="headerlink" title="常见的警告组合"></a>常见的警告组合</h3><p>-Wall<br>-Wextra<br>-Wpedantic<br>-Weverything<br>-Wshadow<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> ( <span class="number">1</span> == <span class="number">1</span> ) &#123;</div><div class="line">        <span class="keyword">int</span> argc = <span class="number">9</span>;</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"integere is %d"</span>, argc);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>-Wfloat-equal 浮点数相等比较<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">float</span> a = <span class="number">2.0</span></div><div class="line">flaot b = <span class="number">3.1</span></div><div class="line"><span class="keyword">if</span> (a == b) &#123;</div><div class="line">    <span class="comment">// TODO</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>-Wundef #if 中使用了未定义的符号<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">if</span> THIS_HAS_NOT_BEEN_DEFINED</span></div></pre></td></tr></table></figure></p>
+<p>-Wempty-body if else do while 不会执行的代码段<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (<span class="number">1</span> == <span class="number">2</span>) &#123;</div><div class="line">    <span class="comment">// TODO</span></div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">    <span class="comment">// When invoke?</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>-Wnewline-eof 文件的结尾符不是空行</p>
+<p>Clang 中新的 警告 类型<br>-Wobjc-literal-compare<br>-Warc-repeated-use-of-weak</p>
+<h3 id="关闭-警告"><a href="#关闭-警告" class="headerlink" title="关闭 警告"></a>关闭 警告</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">#pragma clang diagnostic push</div><div class="line">#pragma clang diagnostic ignore &quot;-Wstupid-method-name&quot;</div><div class="line"></div><div class="line">- (BOOL)doTheThingWithTheOtherThing &#123;</div><div class="line">    // TODO</div><div class="line">&#125;</div><div class="line"></div><div class="line">#pragma clang diagnostic pop</div><div class="line"></div><div class="line">- (void)doThingWithObject(NSObject * __attribute__((unused)))thingie &#123;</div><div class="line">    // TODO</div><div class="line">&#125;</div><div class="line"></div><div class="line">- (void)doThingWithObject(NSObject * __unused)thingie &#123;</div><div class="line">    // TODO</div><div class="line">&#125;</div><div class="line"></div><div class="line">- (void)doThingWithObject(NSObject *)thingie &#123;</div><div class="line">    #pragma unused(thingie)</div><div class="line">    // TODO</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>add Complier Flags -W</p>
+<h2 id="Function-Attribute-attribute-attribute-list"><a href="#Function-Attribute-attribute-attribute-list" class="headerlink" title="Function Attribute attribute ((attribute-list))"></a>Function Attribute <strong>attribute</strong> ((attribute-list))</h2><h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2><ul>
+<li><a href="https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html" target="_blank" rel="external">https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html</a></li>
+<li><a href="https://gcc.gnu.org/onlinedocs/gcc/Diagnostic-Pragmas.html" target="_blank" rel="external">https://gcc.gnu.org/onlinedocs/gcc/Diagnostic-Pragmas.html</a></li>
+<li><a href="http://clang.llvm.org/docs/UsersManual.html#options-to-control-error-and-warning-messages" target="_blank" rel="external">http://clang.llvm.org/docs/UsersManual.html#options-to-control-error-and-warning-messages</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://puzzlefun.github.io/2016/04/11/compile/" data-id="ciuqjbrjs000k2os6ruob5o9r" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GCC/">GCC</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Objective/">Objective</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Xcode/">Xcode</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/08/29/beign-php/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          beign-php
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/03/16/xcode/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Xcode</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Dictionary/">Dictionary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/">Tool</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Apple/">Apple</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Crash/">Crash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GCC/">GCC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/">GitHub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Objective/">Objective</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Objective-C/">Objective-C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SKView/">SKView</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SVN/">SVN</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Security/">Security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TV/">TV</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UIView/">UIView</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xcode/">Xcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iPad/">iPad</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iPhone/">iPhone</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iWatch/">iWatch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lldb/">lldb</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/C/" style="font-size: 10px;">C++</a> <a href="/tags/Crash/" style="font-size: 10px;">Crash</a> <a href="/tags/GCC/" style="font-size: 10px;">GCC</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/Objective/" style="font-size: 10px;">Objective</a> <a href="/tags/Objective-C/" style="font-size: 15px;">Objective-C</a> <a href="/tags/SKView/" style="font-size: 10px;">SKView</a> <a href="/tags/SVN/" style="font-size: 10px;">SVN</a> <a href="/tags/Security/" style="font-size: 10px;">Security</a> <a href="/tags/TV/" style="font-size: 10px;">TV</a> <a href="/tags/UIView/" style="font-size: 10px;">UIView</a> <a href="/tags/Xcode/" style="font-size: 15px;">Xcode</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/iPad/" style="font-size: 10px;">iPad</a> <a href="/tags/iPhone/" style="font-size: 10px;">iPhone</a> <a href="/tags/iWatch/" style="font-size: 10px;">iWatch</a> <a href="/tags/lldb/" style="font-size: 10px;">lldb</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/10/26/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/21/iOS-remote-debug/">构建iOS 远程调试环境</a>
+          </li>
+        
+          <li>
+            <a href="/2016/08/29/beign-php/">beign-php</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/11/compile/">The Compiler is Mine Friend</a>
+          </li>
+        
+          <li>
+            <a href="/2016/03/16/xcode/">Xcode</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 carlhuting<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
