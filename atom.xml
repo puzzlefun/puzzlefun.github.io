@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>puzzle4fun</title>
+  <subtitle>「Stay hungry. Stay foolish.」</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://puzzlefun.github.io/"/>
+  <updated>2016-10-26T06:17:00.000Z</updated>
+  <id>https://puzzlefun.github.io/</id>
+  
+  <author>
+    <name>carlhuting</name>
+    <email>carlhuting@gmail.com</email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://puzzlefun.github.io/2016/10/26/hello-world/"/>
+    <id>https://puzzlefun.github.io/2016/10/26/hello-world/</id>
+    <published>2016-10-26T05:09:31.000Z</published>
+    <updated>2016-10-26T06:17:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>构建iOS 远程调试环境</title>
+    <link href="https://puzzlefun.github.io/2016/09/21/iOS-remote-debug/"/>
+    <id>https://puzzlefun.github.io/2016/09/21/iOS-remote-debug/</id>
+    <published>2016-09-21T07:07:28.000Z</published>
+    <updated>2016-10-26T05:32:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>预备环境：<br>macOS jailbreak iOS </p>
+<p>1 拷贝debugserver 至Mac 本地<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">scp root@&#123;iOS ip&#125;:/Developer/usr/bin/debugserver ~/debugserver</div><div class="line">lipo -thin arm64 ~/debugserver -output ~/debugserver</div></pre></td></tr></table></figure></p>
+<p>2 给debugserver 添加 task_for_pid 权限<br>新建文件 ent.xml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;plist version=&quot;1.0&quot;&gt;</div><div class="line">&lt;dict&gt;</div><div class="line">&lt;key&gt;com.apple.springboard.debugapplications&lt;/key&gt;</div><div class="line">&lt;true/&gt;</div><div class="line">&lt;key&gt;get-task-allow&lt;/key&gt;</div><div class="line">&lt;true/&gt;</div><div class="line">&lt;key&gt;task_for_pid-allow&lt;/key&gt;</div><div class="line">&lt;true/&gt;</div><div class="line">&lt;key&gt;run-unsigned-code&lt;/key&gt;</div><div class="line">&lt;true/&gt;</div><div class="line">&lt;/dict&gt;</div><div class="line">&lt;/plist&gt;</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ldid -Sent.xml debugserver</div></pre></td></tr></table></figure>
+<p>3 将处理过后的 debugserver 拷贝会 iOS<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">scp ~/debugserver root@&#123;iOS ip&#125;:/usr/bin/debugserver</div><div class="line">ssh root@&#123;iOS IP&#125;</div><div class="line">chmod +x /usr/bin/debugserver</div></pre></td></tr></table></figure></p>
+<p>常看 库支持的架构 lipo -info {bin}</p>
+<h2 id="使用-debugserver"><a href="#使用-debugserver" class="headerlink" title="使用 debugserver"></a>使用 debugserver</h2><p>相关知识：<br>ssh<br>scp<br>lipo<br>ldid</p>
+<h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2><ul>
+<li><a href="http://bbs.iosre.com/t/debugserver-lldb-gdb/65" target="_blank" rel="external">http://bbs.iosre.com/t/debugserver-lldb-gdb/65</a></li>
+<li><a href="http://www.cnblogs.com/ludashi/p/5730338.html" target="_blank" rel="external">http://www.cnblogs.com/ludashi/p/5730338.html</a></li>
+<li><a href="http://versprite.com/og/ios-reverse-engineering-part-one-configuring-lldb/" target="_blank" rel="external">http://versprite.com/og/ios-reverse-engineering-part-one-configuring-lldb/</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;预备环境：&lt;br&gt;macOS jailbreak iOS &lt;/p&gt;
+&lt;p&gt;1 拷贝debugserver 至Mac 本地&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div c
+    
+    </summary>
+    
+    
+      <category term="iOS" scheme="https://puzzlefun.github.io/tags/iOS/"/>
+    
+      <category term="lldb" scheme="https://puzzlefun.github.io/tags/lldb/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>beign-php</title>
+    <link href="https://puzzlefun.github.io/2016/08/29/beign-php/"/>
+    <id>https://puzzlefun.github.io/2016/08/29/beign-php/</id>
+    <published>2016-08-29T12:27:40.000Z</published>
+    <updated>2016-10-26T04:51:59.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>The Compiler is Mine Friend</title>
+    <link href="https://puzzlefun.github.io/2016/04/11/compile/"/>
+    <id>https://puzzlefun.github.io/2016/04/11/compile/</id>
+    <published>2016-04-11T08:48:22.000Z</published>
+    <updated>2016-10-26T04:51:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Apple-LLVM-compiler"><a href="#Apple-LLVM-compiler" class="headerlink" title="Apple LLVM compiler"></a>Apple LLVM compiler</h2><h3 id="Warning-Flag-语法"><a href="#Warning-Flag-语法" class="headerlink" title="Warning Flag 语法"></a>Warning Flag 语法</h3><ul>
+<li>-Wfoo 开启 foo，foo表示一类或者一组警告</li>
+<li>-Wno-foo 关闭 foo 警告</li>
+<li>-w 关闭所有的警告</li>
+</ul>
+<h3 id="设置-Warning-Errors"><a href="#设置-Warning-Errors" class="headerlink" title="设置 Warning = Errors"></a>设置 Warning = Errors</h3><p>//.xccongig<br>GCC_TREAT_WARNINGS_AS_ERRORS = YES<br>// cms-ling<br>-Werror</p>
+<h3 id="编译器给出的几类警告："><a href="#编译器给出的几类警告：" class="headerlink" title="编译器给出的几类警告："></a>编译器给出的几类警告：</h3><ul>
+<li>A valid issue =&gt; Fix the issue</li>
+<li>你不关心的，或者无意义的警告 =&gt; 关闭 局部或者全局 警告</li>
+<li>你不理解的警告 =&gt; 弄明白，否者你永远不明白</li>
+</ul>
+<h3 id="常见的警告组合"><a href="#常见的警告组合" class="headerlink" title="常见的警告组合"></a>常见的警告组合</h3><p>-Wall<br>-Wextra<br>-Wpedantic<br>-Weverything<br>-Wshadow<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> ( <span class="number">1</span> == <span class="number">1</span> ) &#123;</div><div class="line">        <span class="keyword">int</span> argc = <span class="number">9</span>;</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"integere is %d"</span>, argc);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>-Wfloat-equal 浮点数相等比较<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">float</span> a = <span class="number">2.0</span></div><div class="line">flaot b = <span class="number">3.1</span></div><div class="line"><span class="keyword">if</span> (a == b) &#123;</div><div class="line">    <span class="comment">// TODO</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>-Wundef #if 中使用了未定义的符号<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">if</span> THIS_HAS_NOT_BEEN_DEFINED</span></div></pre></td></tr></table></figure></p>
+<p>-Wempty-body if else do while 不会执行的代码段<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (<span class="number">1</span> == <span class="number">2</span>) &#123;</div><div class="line">    <span class="comment">// TODO</span></div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">    <span class="comment">// When invoke?</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>-Wnewline-eof 文件的结尾符不是空行</p>
+<p>Clang 中新的 警告 类型<br>-Wobjc-literal-compare<br>-Warc-repeated-use-of-weak</p>
+<h3 id="关闭-警告"><a href="#关闭-警告" class="headerlink" title="关闭 警告"></a>关闭 警告</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">#pragma clang diagnostic push</div><div class="line">#pragma clang diagnostic ignore &quot;-Wstupid-method-name&quot;</div><div class="line"></div><div class="line">- (BOOL)doTheThingWithTheOtherThing &#123;</div><div class="line">    // TODO</div><div class="line">&#125;</div><div class="line"></div><div class="line">#pragma clang diagnostic pop</div><div class="line"></div><div class="line">- (void)doThingWithObject(NSObject * __attribute__((unused)))thingie &#123;</div><div class="line">    // TODO</div><div class="line">&#125;</div><div class="line"></div><div class="line">- (void)doThingWithObject(NSObject * __unused)thingie &#123;</div><div class="line">    // TODO</div><div class="line">&#125;</div><div class="line"></div><div class="line">- (void)doThingWithObject(NSObject *)thingie &#123;</div><div class="line">    #pragma unused(thingie)</div><div class="line">    // TODO</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>add Complier Flags -W</p>
+<h2 id="Function-Attribute-attribute-attribute-list"><a href="#Function-Attribute-attribute-attribute-list" class="headerlink" title="Function Attribute attribute ((attribute-list))"></a>Function Attribute <strong>attribute</strong> ((attribute-list))</h2><h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2><ul>
+<li><a href="https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html" target="_blank" rel="external">https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html</a></li>
+<li><a href="https://gcc.gnu.org/onlinedocs/gcc/Diagnostic-Pragmas.html" target="_blank" rel="external">https://gcc.gnu.org/onlinedocs/gcc/Diagnostic-Pragmas.html</a></li>
+<li><a href="http://clang.llvm.org/docs/UsersManual.html#options-to-control-error-and-warning-messages" target="_blank" rel="external">http://clang.llvm.org/docs/UsersManual.html#options-to-control-error-and-warning-messages</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      充分利用编译为我们提供的便利，可以极大的改善我们的工作效率。我喜欢和大家交朋友，我相信朋友会在关键时候给我提示的。
+    
+    </summary>
+    
+      <category term="Tool" scheme="https://puzzlefun.github.io/categories/Tool/"/>
+    
+    
+      <category term="Xcode" scheme="https://puzzlefun.github.io/tags/Xcode/"/>
+    
+      <category term="GCC" scheme="https://puzzlefun.github.io/tags/GCC/"/>
+    
+      <category term="Objective" scheme="https://puzzlefun.github.io/tags/Objective/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Xcode</title>
+    <link href="https://puzzlefun.github.io/2016/03/16/xcode/"/>
+    <id>https://puzzlefun.github.io/2016/03/16/xcode/</id>
+    <published>2016-03-16T02:03:00.000Z</published>
+    <updated>2016-10-26T04:51:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h2 id="Path"><a href="#Path" class="headerlink" title="Path"></a>Path</h2><h2 id="Plugin"><a href="#Plugin" class="headerlink" title="Plugin"></a>Plugin</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins</div></pre></td></tr></table></figure>
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>command+shift+O</p>
+<h2 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h2><h2 id="UI"><a href="#UI" class="headerlink" title="UI"></a>UI</h2>]]></content>
+    
+    <summary type="html">
+    
+      工欲善其事必先利其器，Xcode作为我们开发的利器，必须仔细研究，好好利用。本文主要介绍本人在使用Xcode过程中使用到的一些操作，包括Xcode使用过程中常涉及的工作目录,常用插件，快捷键，以及一些调试操作等等
+    
+    </summary>
+    
+      <category term="Tool" scheme="https://puzzlefun.github.io/categories/Tool/"/>
+    
+    
+      <category term="Xcode" scheme="https://puzzlefun.github.io/tags/Xcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VersionControl</title>
+    <link href="https://puzzlefun.github.io/2016/03/10/VersionControl/"/>
+    <id>https://puzzlefun.github.io/2016/03/10/VersionControl/</id>
+    <published>2016-03-10T03:07:35.000Z</published>
+    <updated>2016-10-26T04:51:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="SVN"><a href="#SVN" class="headerlink" title="SVN"></a>SVN</h2><h3 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h3><p><a href="http://svnbook.red-bean.com/" target="_blank" rel="external">http://svnbook.red-bean.com/</a><br><a href="https://subversion.apache.org/" target="_blank" rel="external">https://subversion.apache.org/</a><br><a href="https://tortoisesvn.net/" target="_blank" rel="external">https://tortoisesvn.net/</a></p>
+<h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><h2 id="TFS"><a href="#TFS" class="headerlink" title="TFS"></a>TFS</h2><h2 id="Mercurial"><a href="#Mercurial" class="headerlink" title="Mercurial"></a>Mercurial</h2><p>###reference</p>
+<ul>
+<li><a href="https://www.mercurial-scm.org/" target="_blank" rel="external">https://www.mercurial-scm.org/</a><br><a href="http://www.jianshu.com/p/7dddf0e9f1ef" target="_blank" rel="external">http://www.jianshu.com/p/7dddf0e9f1ef</a><br><a href="https://lostechies.com/joshuaflanagan/2010/09/03/use-gitk-to-understand-git/" target="_blank" rel="external">https://lostechies.com/joshuaflanagan/2010/09/03/use-gitk-to-understand-git/</a><br><a href="http://rogerdudler.github.io/git-guide/index.zh.html" target="_blank" rel="external">http://rogerdudler.github.io/git-guide/index.zh.html</a><br><a href="http://marklodato.github.io/visual-git-guide/index-zh-cn.html" target="_blank" rel="external">http://marklodato.github.io/visual-git-guide/index-zh-cn.html</a><br><a href="http://www.jianshu.com/p/331cd9fdeae7?hmsr=toutiao.io&amp;utm_medium=toutiao.io&amp;utm_source=toutiao.io" target="_blank" rel="external">http://www.jianshu.com/p/331cd9fdeae7?hmsr=toutiao.io&amp;utm_medium=toutiao.io&amp;utm_source=toutiao.io</a><br><a href="https://segmentfault.com/a/1190000002918123" target="_blank" rel="external">https://segmentfault.com/a/1190000002918123</a><br><a href="https://www.atlassian.com/git/" target="_blank" rel="external">https://www.atlassian.com/git/</a><br><a href="https://www.kernel.org/pub/software/scm/git/docs/git.html" target="_blank" rel="external">https://www.kernel.org/pub/software/scm/git/docs/git.html</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      这个很重要
+    
+    </summary>
+    
+      <category term="Tool" scheme="https://puzzlefun.github.io/categories/Tool/"/>
+    
+    
+      <category term="Git" scheme="https://puzzlefun.github.io/tags/Git/"/>
+    
+      <category term="SVN" scheme="https://puzzlefun.github.io/tags/SVN/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Coordinate</title>
+    <link href="https://puzzlefun.github.io/2016/03/02/coordinate/"/>
+    <id>https://puzzlefun.github.io/2016/03/02/coordinate/</id>
+    <published>2016-03-02T09:15:49.000Z</published>
+    <updated>2016-10-26T04:51:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>frame anchor position center size bound</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h2 id="UIView-NSView"><a href="#UIView-NSView" class="headerlink" title="UIView / NSView"></a>UIView / NSView</h2><p>position<br>anchor<br>frame<br>center<br><img src="~/resource/layer_coords_bounds_2x.png" alt=""></p>
+<h2 id="SKView"><a href="#SKView" class="headerlink" title="SKView"></a>SKView</h2><p>position<br>anchor<br>center<br>frame<br>size</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2>]]></content>
+    
+    <summary type="html">
+    
+      在不同的平台可能采用了不同的坐标原点方式，对于GUI的设计，深入理解坐标系以及相关属性是十分重要的。
+    
+    </summary>
+    
+      <category term="iOS" scheme="https://puzzlefun.github.io/categories/iOS/"/>
+    
+    
+      <category term="iOS" scheme="https://puzzlefun.github.io/tags/iOS/"/>
+    
+      <category term="UIView" scheme="https://puzzlefun.github.io/tags/UIView/"/>
+    
+      <category term="SKView" scheme="https://puzzlefun.github.io/tags/SKView/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Crash</title>
+    <link href="https://puzzlefun.github.io/2016/02/02/crash/"/>
+    <id>https://puzzlefun.github.io/2016/02/02/crash/</id>
+    <published>2016-02-02T06:42:01.000Z</published>
+    <updated>2016-10-26T05:32:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="解析Crash准备的材料"><a href="#解析Crash准备的材料" class="headerlink" title="解析Crash准备的材料"></a>解析Crash准备的材料</h2><ul>
+<li>原材料：Crash log </li>
+<li>辅料： dysm 和 app</li>
+<li>工具： symbolicatecrash, otool, xcrun, atos</li>
+</ul>
+<h2 id="收集材料"><a href="#收集材料" class="headerlink" title="收集材料"></a>收集材料</h2><ul>
+<li>（Xcode）Windows -&gt; Device -&gt; View Device Logs </li>
+<li>Log 收集第三方平台</li>
+<li>打包应用时的 .xcarchive(dysm, app)</li>
+</ul>
+<h2 id="第一道菜-Symbolicatecrash"><a href="#第一道菜-Symbolicatecrash" class="headerlink" title="第一道菜 Symbolicatecrash"></a>第一道菜 Symbolicatecrash</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">find /Applications/Xcode.app -name symbolicatecrash -type f</div><div class="line"></div><div class="line">/Applications/Xcode.app/Contents/SharedFrameworks/DTDeviceKitBase.framework/Versions/A/Resources/symbolicatecrash</div></pre></td></tr></table></figure>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">/Applications/Xcode.app/Contents/SharedFrameworks/DTDeviceKitBase.framework/Versions/A/Resources/symbolicatecrash 56ae4a1e0feaad87628b4c8e.crash ThumbDoctor.app.dSYM &gt; crash.txt</div><div class="line"></div><div class="line">---</div><div class="line">## Warning: Unable to symbolicate from required binary: /Users/lkeg/Library/Developer/Xcode/iOS DeviceSupport/8.3 (12F70)/Symbols/System/Library/Frameworks/CoreLocation.framework/CoreLocation</div><div class="line">---</div><div class="line"></div><div class="line">出现</div><div class="line">----</div><div class="line">Error: &quot;DEVELOPER_DIR&quot; is not defined at /Applications/Xcode.app/Contents/SharedFrameworks/DTDeviceKitBase.framework/Versions/A/Resources/symbolicatecrash line 60.</div><div class="line">----</div><div class="line"></div><div class="line">export DEVELOPER_DIR=&quot;/Applications/XCode.app/Contents/Developer&quot;</div></pre></td></tr></table></figure>
+<h2 id="第二道菜-符号地址逐行解析"><a href="#第二道菜-符号地址逐行解析" class="headerlink" title="第二道菜 符号地址逐行解析"></a>第二道菜 符号地址逐行解析</h2><p>起始地址：即使每次iOS app启动都会加载(main module)主模块在不同的内存地址（大多数情况下32bit框架对应的地址是0x4000、64bit框架对应的地址为0x0000000100000000）。</p>
+<ul>
+<li>cd xx.app</li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">    otool -arch arm64 -l xxx.app/xxx  | grep -B 1 -A 10 &quot;LC_SEGM&quot; | grep -B 3 -A 8 &quot;__TEXT&quot;</div><div class="line">    </div><div class="line">    Load command 1</div><div class="line">     cmd LC_SEGMENT_64</div><div class="line"> cmdsize 952</div><div class="line"> segname __TEXT</div><div class="line">  vmaddr 0x0000000100000000</div><div class="line">  vmsize 0x00000000000b8000</div><div class="line"> fileoff 0</div><div class="line">filesize 753664</div><div class="line"> maxprot 0x00000005</div><div class="line">initprot 0x00000005</div><div class="line">  nsects 11</div><div class="line">   flags 0x0</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>其中 vmaddr 0x0000000100000000 地址便为我们所要的app运行起始地址。</p>
+<h3 id="计算-symbol-address"><a href="#计算-symbol-address" class="headerlink" title="计算 symbol address"></a>计算 symbol address</h3><p>symbol address = 地址偏移量＋起始地址。<br>起始地址上面我们已经得到，地址偏移量就是单行信息中“+”号后面的数值。</p>
+<h3 id="解析-symbol-address"><a href="#解析-symbol-address" class="headerlink" title="解析 symbol address"></a>解析 symbol address</h3><p>xcrun atos –arch arm64 -o xxx.app/xxx [addresss]</p>
+<h3 id="load-address-相对偏移解析"><a href="#load-address-相对偏移解析" class="headerlink" title="load address 相对偏移解析"></a>load address 相对偏移解析</h3><p>xcrun atos –arch arm64 -o xxx.app/xxx -l [address] [address]</p>
+<h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2><ul>
+<li><a href="https://www.plcrashreporter.org/" target="_blank" rel="external">https://www.plcrashreporter.org/</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      今天App又Crash了吗？导致Crash的原因可能很多，同样分析Crash的手段也很多，我们来缕缕看。
+    
+    </summary>
+    
+    
+      <category term="Crash" scheme="https://puzzlefun.github.io/tags/Crash/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>TodayWidget</title>
+    <link href="https://puzzlefun.github.io/2016/01/27/TodayWidget/"/>
+    <id>https://puzzlefun.github.io/2016/01/27/TodayWidget/</id>
+    <published>2016-01-27T08:11:14.000Z</published>
+    <updated>2016-10-26T04:51:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h2 id="UI"><a href="#UI" class="headerlink" title="UI"></a>UI</h2><ul>
+<li>设置最佳展示区域<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">self.preferredContentSize = CGSizeMake(self.view.bounds.size.width, 100);  </div><div class="line">// 一般默认的View是从图标的右边开始的...如果你想变换,就要实现这个方法  </div><div class="line">- (UIEdgeInsets)widgetMarginInsetsForProposedMarginInsets:(UIEdgeInsets)defaultMarginInsets &#123;  </div><div class="line">    //UIEdgeInsets newMarginInsets = UIEdgeInsetsMake(defaultMarginInsets.top, defaultMarginInsets.left - 16, defaultMarginInsets.bottom, defaultMarginInsets.right);  </div><div class="line">    //return newMarginInsets;  </div><div class="line">    //return UIEdgeInsetsZero; // 完全靠到了左边....  </div><div class="line">    return UIEdgeInsetsMake(0.0, 16.0, 0, 0);  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Data"><a href="#Data" class="headerlink" title="Data"></a>Data</h2><p>数据共享  App groups<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:groupID]; </div><div class="line">NSURL *containerURL = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:groupID];  </div><div class="line">containerURL = [containerURL URLByAppendingPathComponent:@&quot;Library/Caches/test&quot;];</div></pre></td></tr></table></figure></p>
+<h2 id="Action"><a href="#Action" class="headerlink" title="Action"></a>Action</h2><p>go to Containing App<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[self.extensionContext openURL:[NSURL URLWithString:@&quot;checklist://action=addlist&quot;] completionHandler:^(BOOL success) &#123;</div><div class="line">        NSLog(@&quot;add a list&quot;);</div><div class="line">    &#125;];</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      containing app App extension Host App(Today)
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Comunication</title>
+    <link href="https://puzzlefun.github.io/2016/01/26/comunication/"/>
+    <id>https://puzzlefun.github.io/2016/01/26/comunication/</id>
+    <published>2016-01-26T06:59:28.000Z</published>
+    <updated>2016-10-26T05:32:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="URL-Scheme"><a href="#URL-Scheme" class="headerlink" title="URL Scheme"></a>URL Scheme</h2><p>完整的：<br>scheme://user:password@host:port/path?query#fragment<br>简化的：<br>scheme://host/path?query</p>
+<p>NSURL<br>NSURLComponents<br>@interface NSString (NSURLUtilities)</p>
+<p>// Returns a new string made from the receiver by replacing all characters not in the allowedCharacters set with percent encoded characters. UTF-8 encoding is used to determine the correct percent encoded characters. Entire URL strings cannot be percent-encoded. This method is intended to percent-encode an URL component or subcomponent string, NOT the entire URL string. Any characters in allowedCharacters outside of the 7-bit ASCII range are ignored.</p>
+<ul>
+<li>(nullable NSString <em>)stringByAddingPercentEncodingWithAllowedCharacters:(NSCharacterSet </em>)allowedCharacters NS_AVAILABLE(10_9, 7_0);</li>
+</ul>
+<p>// Returns a new string made from the receiver by replacing all percent encoded sequences with the matching UTF-8 characters.<br>@property (nullable, readonly, copy) NSString *stringByRemovingPercentEncoding NS_AVAILABLE(10_9, 7_0);</p>
+<ul>
+<li>(nullable NSString *)stringByAddingPercentEscapesUsingEncoding:(NSStringEncoding)enc NS_DEPRECATED(10_0, 10_11, 2_0, 9_0, “Use -stringByAddingPercentEncodingWithAllowedCharacters: instead, which always uses the recommended UTF-8 encoding, and which encodes for a specific URL component or subcomponent since each URL component or subcomponent has different rules for what characters are valid.”);</li>
+<li>(nullable NSString *)stringByReplacingPercentEscapesUsingEncoding:(NSStringEncoding)enc NS_DEPRECATED(10_0, 10_11, 2_0, 9_0, “Use -stringByRemovingPercentEncoding instead, which always uses the recommended UTF-8 encoding.”);</li>
+</ul>
+<p>@end</p>
+<p>App 之间Comunication<br>设置<br>plist<br>发送<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">// UIApplication</div><div class="line">- (BOOL)openURL:(NSURL*)url NS_EXTENSION_UNAVAILABLE_IOS(&quot;&quot;);</div><div class="line">- (BOOL)canOpenURL:(NSURL *)url NS_AVAILABLE_IOS(3_0)</div></pre></td></tr></table></figure></p>
+<p>接受<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// UIApplicationDelegate</div><div class="line">- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url NS_DEPRECATED_IOS(2_0, 9_0, &quot;Please use application:openURL:options:&quot;) __TVOS_PROHIBITED;</div><div class="line">- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(id)annotation NS_DEPRECATED_IOS(4_2, 9_0, &quot;Please use application:openURL:options:&quot;) __TVOS_PROHIBITED;</div><div class="line">- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary&lt;NSString*, id&gt; *)options NS_AVAILABLE_IOS(9_0); // no equiv. notification. return NO if the application can&apos;t open for some reason</div></pre></td></tr></table></figure></p>
+<h3 id="refer"><a href="#refer" class="headerlink" title="refer"></a>refer</h3><ul>
+<li><a href="http://iosdevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html" target="_blank" rel="external">http://iosdevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html</a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Inter-AppCommunication/Inter-AppCommunication.html" target="_blank" rel="external">https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Inter-AppCommunication/Inter-AppCommunication.html</a></li>
+</ul>
+<h2 id="Universal-Links"><a href="#Universal-Links" class="headerlink" title="Universal Links"></a>Universal Links</h2><p>设置</p>
+<h2 id="web"><a href="#web" class="headerlink" title="web"></a>web</h2><p>1 创建 apple-app-site-association 配置文件（没有后缀），文件内包含App可以处理的JSON格式URLs设置<br>2 上传 apple-app-site-association 文件至HTTPS服务器<br>3 App完成处理 universal links 编码</p>
+<p>实例<br>{<br>    “applinks”: {<br>        “apps”: [],<br>        “details”: [<br>            {<br>                “appID”: “9JA89QQLNQ.com.apple.wwdc”,<br>                “paths”: [ “/wwdc/news/“, “/videos/wwdc/2015/<em>“]<br>            },<br>            {<br>                “appID”: “TeamID.BundleID2”,<br>                “paths”: [ “</em>“ ]<br>            }<br>        ]<br>    }<br>}</p>
+<h2 id="App"><a href="#App" class="headerlink" title="App"></a>App</h2><p>Add an entitlement that specifies the domains your app supports.<br>Update your app delegate to respond appropriately when it receives the NSUserActivity object.<br>NSUserActivityTypeBrowsingWeb<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">// Called on the main thread after the NSUserActivity object is available. Use the data you stored in the NSUserActivity object to re-create what the user was doing.</div><div class="line">// You can create/fetch any restorable objects associated with the user activity, and pass them to the restorationHandler. They will then have the UIResponder restoreUserActivityState: method</div><div class="line">// invoked with the user activity. Invoking the restorationHandler is optional. It may be copied and invoked later, and it will bounce to the main thread to complete its work and call</div><div class="line">// restoreUserActivityState on all objects.</div><div class="line">- (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void(^)(NSArray * __nullable restorableObjects))restorationHandler NS_AVAILABLE_IOS(8_0);</div></pre></td></tr></table></figure></p>
+<h2 id="relation"><a href="#relation" class="headerlink" title="relation"></a>relation</h2><p>HandOff<br>Core Spotlight</p>
+<h3 id="refer-1"><a href="#refer-1" class="headerlink" title="refer"></a>refer</h3><ul>
+<li><a href="https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/AppSearch/UniversalLinks.html" target="_blank" rel="external">https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/AppSearch/UniversalLinks.html</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      本文主要分析移动开发中，不同端的通信方式，以及推荐最佳的Mobile First的设计建议
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Dependency</title>
+    <link href="https://puzzlefun.github.io/2016/01/21/dependency/"/>
+    <id>https://puzzlefun.github.io/2016/01/21/dependency/</id>
+    <published>2016-01-21T07:00:16.000Z</published>
+    <updated>2016-10-26T04:51:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>我们都是Github的搬运工，积木</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h2 id="Swift-package-manager"><a href="#Swift-package-manager" class="headerlink" title="Swift-package-manager"></a>Swift-package-manager</h2><p><a href="https://github.com/apple/swift-package-manager" target="_blank" rel="external">https://github.com/apple/swift-package-manager</a></p>
+<h2 id="CocosPod"><a href="#CocosPod" class="headerlink" title="CocosPod"></a>CocosPod</h2><p><a href="https://guides.cocoapods.org/using/the-podfile.html" target="_blank" rel="external">https://guides.cocoapods.org/using/the-podfile.html</a></p>
+<h2 id="Carthage"><a href="#Carthage" class="headerlink" title="Carthage"></a>Carthage</h2><p><a href="https://github.com/Carthage/Carthage" target="_blank" rel="external">https://github.com/Carthage/Carthage</a></p>
+<h2 id="subModule"><a href="#subModule" class="headerlink" title="subModule"></a>subModule</h2><h2 id="Manule"><a href="#Manule" class="headerlink" title="Manule"></a>Manule</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;我们都是Github的搬运工，积木&lt;/p&gt;
+&lt;h2 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Project</title>
+    <link href="https://puzzlefun.github.io/2016/01/20/Project/"/>
+    <id>https://puzzlefun.github.io/2016/01/20/Project/</id>
+    <published>2016-01-20T03:24:12.000Z</published>
+    <updated>2016-10-26T04:51:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h2 id="workspace"><a href="#workspace" class="headerlink" title="workspace"></a>workspace</h2><p>A workspace is an Xcode document that groups projects and other documents so you can work on them together. A workspace can contain any number of Xcode projects, plus any other files you want to include. In addition to organizing all the files in each Xcode project, a workspace provides implicit and explicit relationships among the included projects and their targets.<br>tip:Projects in a Workspace Share a Build Directory</p>
+<h2 id="project"><a href="#project" class="headerlink" title="project"></a>project</h2><p>An Xcode project is a repository for all the files, resources, and information required to build one or more software products. A project contains all the elements used to build your products and maintains the relationships between those elements. It contains one or more targets, which specify how to build products. A project defines default build settings for all the targets in the project (each target can also specify its own build settings, which override the project build settings).</p>
+<h2 id="target"><a href="#target" class="headerlink" title="target"></a>target</h2><p>A target specifies a product to build and contains the instructions for building the product from a set of files in a project or workspace. A target defines a single product; it organizes the inputs into the build system—the source files and instructions for processing those source files—required to build that product. Projects can contain one or more targets, each of which produces one product.</p>
+<h2 id="scheme"><a href="#scheme" class="headerlink" title="scheme"></a>scheme</h2><p>An Xcode scheme defines a collection of targets to build, a configuration to use when building, and a collection of tests to execute.</p>
+<h2 id="configure"><a href="#configure" class="headerlink" title="configure"></a>configure</h2><p>A build setting is a variable that contains information about how a particular aspect of a product’s build process should be performed. For example, the information in a build setting can specify which options Xcode passes to the compiler.</p>
+<p>You can specify build settings at the project or target level. Each project-level build setting applies to all targets in the project unless explicitly overridden by the build settings for a specific target.</p>
+<h2 id="xcodebuild"><a href="#xcodebuild" class="headerlink" title="xcodebuild"></a>xcodebuild</h2><p>Usage: xcodebuild [-project <projectname>] [[-target <targetname>]…|-alltargets] [-configuration <configurationname>] [-arch <architecture>]… [-sdk [<sdkname>|<sdkpath>]] [-showBuildSettings] [<buildsetting>=<value>]… [<buildaction>]…<br>       xcodebuild [-project <projectname>] -scheme <schemename> [-destination <destinationspecifier>]… [-configuration <configurationname>] [-arch <architecture>]… [-sdk [<sdkname>|<sdkpath>]] [-showBuildSettings] [<buildsetting>=<value>]… [<buildaction>]…<br>       xcodebuild -workspace <workspacename> -scheme <schemename> [-destination <destinationspecifier>]… [-configuration <configurationname>] [-arch <architecture>]… [-sdk [<sdkname>|<sdkpath>]] [-showBuildSettings] [<buildsetting>=<value>]… [<buildaction>]…<br>       xcodebuild -version [-sdk [<sdkfullpath>|<sdkname>] [<infoitem>] ]<br>       xcodebuild -list [[-project <projectname>]|[-workspace <workspacename>]]<br>       xcodebuild -showsdks<br>       xcodebuild -exportArchive -archivePath <xcarchivepath> -exportPath <destinationpath> -exportOptionsPlist <plistpath><br>       xcodebuild -exportLocalizations -localizationPath <path></path> -project <projectname> [-exportLanguage <targetlanguage>…]<br>       xcodebuild -importLocalizations -localizationPath <path></path> -project <projectname></projectname></targetlanguage></projectname></plistpath></destinationpath></xcarchivepath></workspacename></projectname></infoitem></sdkname></sdkfullpath></buildaction></value></buildsetting></sdkpath></sdkname></architecture></configurationname></destinationspecifier></schemename></workspacename></buildaction></value></buildsetting></sdkpath></sdkname></architecture></configurationname></destinationspecifier></schemename></projectname></buildaction></value></buildsetting></sdkpath></sdkname></architecture></configurationname></targetname></projectname></p>
+<h2 id="xctool"><a href="#xctool" class="headerlink" title="xctool"></a>xctool</h2><p>usage: xctool [BASE OPTIONS] [ACTION [ACTION ARGUMENTS]] …</p>
+<h2 id="command"><a href="#command" class="headerlink" title="command"></a>command</h2><p>sed<br>/usr/libexec/PlistBuddy</p>
+<h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2><ul>
+<li><a href="https://developer.apple.com/library/ios/featuredarticles/XcodeConcepts/Concept-Targets.html" target="_blank" rel="external">https://developer.apple.com/library/ios/featuredarticles/XcodeConcepts/Concept-Targets.html</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      工程管理
+    
+    </summary>
+    
+    
+      <category term="Xcode" scheme="https://puzzlefun.github.io/tags/Xcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>encode-decode</title>
+    <link href="https://puzzlefun.github.io/2016/01/18/encode-decode/"/>
+    <id>https://puzzlefun.github.io/2016/01/18/encode-decode/</id>
+    <published>2016-01-18T02:31:00.000Z</published>
+    <updated>2016-10-26T04:51:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>晕头转向，好多种编码，我只知道UTF-8</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p>信息化<br>字符集<br>常见字符集有 {US-ASCII，UCS，GB2312}<br>字符编码方案 UTF-8</p>
+<h2 id="UCS"><a href="#UCS" class="headerlink" title="UCS"></a>UCS</h2><h2 id="ASCII-（American-Standard-Code-for-Information-Interchange，美国标准信息交换代码）"><a href="#ASCII-（American-Standard-Code-for-Information-Interchange，美国标准信息交换代码）" class="headerlink" title="ASCII （American Standard Code for Information Interchange，美国标准信息交换代码）"></a>ASCII （American Standard Code for Information Interchange，美国标准信息交换代码）</h2><p>y=f(x)  定义域 D={x|拉丁字符} 值域 [0,0x7F]</p>
+<h2 id="Unicode"><a href="#Unicode" class="headerlink" title="Unicode"></a>Unicode</h2><p>y=f(x) 定义域 D={x|统一字符} 值域 [0,0xFFFF]</p>
+<h2 id="UTF-8-Unicode-tranform-formater"><a href="#UTF-8-Unicode-tranform-formater" class="headerlink" title="UTF-8 (Unicode tranform formater)"></a>UTF-8 (Unicode tranform formater)</h2><p>y=g(x)=g(f(x)) </p>
+<h2 id="UTF-16"><a href="#UTF-16" class="headerlink" title="UTF-16"></a>UTF-16</h2><h2 id="Base64"><a href="#Base64" class="headerlink" title="Base64"></a>Base64</h2><h2 id="GB2312"><a href="#GB2312" class="headerlink" title="GB2312"></a>GB2312</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;晕头转向，好多种编码，我只知道UTF-8&lt;/p&gt;
+&lt;h2 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Tools</title>
+    <link href="https://puzzlefun.github.io/2015/12/11/tools/"/>
+    <id>https://puzzlefun.github.io/2015/12/11/tools/</id>
+    <published>2015-12-11T07:24:19.000Z</published>
+    <updated>2016-10-26T04:51:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h2 id="project"><a href="#project" class="headerlink" title="project"></a>project</h2><p>cocospod<br>fastline<br>Carthage</p>
+<h2 id="build"><a href="#build" class="headerlink" title="build"></a>build</h2><p>xcodebuild<br>xcrun<br>security<br>sed<br>xtool<br>xbuild<br>fastline</p>
+<h2 id="analysis"><a href="#analysis" class="headerlink" title="analysis"></a>analysis</h2><p>nm<br>otool<br>Class-dump<br>strings<br>lipo </p>
+<h2 id="network"><a href="#network" class="headerlink" title="network"></a>network</h2><ul>
+<li><a href="https://github.com/facebook/chisel" target="_blank" rel="external">Chisel</a> is a collection of LLDB commands to assist debugging iOS apps.<h2 id="debug"><a href="#debug" class="headerlink" title="debug"></a>debug</h2>lldb<h2 id="disassemble"><a href="#disassemble" class="headerlink" title="disassemble"></a>disassemble</h2>ida<br>Hopper<h2 id="others"><a href="#others" class="headerlink" title="others"></a>others</h2>brew<br>svn<br>git</li>
+</ul>
+<p><a href="https://github.com/Zepo/MLeaksFinder" target="_blank" rel="external">MLeaksFinder</a> Find memory leaks in your iOS app at develop time.</p>
+<p>Codesign<br>xxd<br><a href="https://github.com/gdbinit/MachOView" target="_blank" rel="external">MachOView</a><br>yololib<br>./yololib [binary] [dylib file]<br>./yololib [被插入dylib的二进制文件] [要插入的dylib]<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">__attribute__((constructor)) static void entry() &#123;</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<p> CaptainHook</p>
+<h2 id="Localization"><a href="#Localization" class="headerlink" title="Localization"></a>Localization</h2> <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">genstrings</div><div class="line">plutil</div></pre></td></tr></table></figure>
+<h1 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h1><ul>
+<li><a href="https://github.com/jonbuda/miro" target="_blank" rel="external">https://github.com/jonbuda/miro</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      工欲善其事必先利其器
+    
+    </summary>
+    
+      <category term="Tool" scheme="https://puzzlefun.github.io/categories/Tool/"/>
+    
+    
+      <category term="Xcode" scheme="https://puzzlefun.github.io/tags/Xcode/"/>
+    
+      <category term="iOS" scheme="https://puzzlefun.github.io/tags/iOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Generic</title>
+    <link href="https://puzzlefun.github.io/2015/12/11/generic/"/>
+    <id>https://puzzlefun.github.io/2015/12/11/generic/</id>
+    <published>2015-12-11T06:01:26.000Z</published>
+    <updated>2016-10-26T04:51:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">//C++ </div><div class="line"></div><div class="line">@protocol Barking &lt;NSObject&gt;</div><div class="line"></div><div class="line">- (void)bark;</div><div class="line"></div><div class="line">@end</div><div class="line"></div><div class="line">//template</div><div class="line">@interface Animal&lt;AnyObject, AnyObject2&gt;:NSObject</div><div class="line"></div><div class="line">@end</div><div class="line"></div><div class="line">@class Dog;</div><div class="line"></div><div class="line">//instance</div><div class="line">@interface Dog : Animal&lt;Dog *, NSString *&gt; &lt;Barking&gt;//protocol</div><div class="line"></div><div class="line">@end</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      拥抱泛型
+    
+    </summary>
+    
+      <category term="iOS" scheme="https://puzzlefun.github.io/categories/iOS/"/>
+    
+    
+      <category term="Objective-C" scheme="https://puzzlefun.github.io/tags/Objective-C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Interview</title>
+    <link href="https://puzzlefun.github.io/2015/12/10/Interview/"/>
+    <id>https://puzzlefun.github.io/2015/12/10/Interview/</id>
+    <published>2015-12-10T01:58:51.000Z</published>
+    <updated>2016-10-26T04:51:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>面试的过程除了考察项目经历外，还会着重考察基础知识<br>程序员面试除了问问数据结构、算法还能问点什么呢？</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h3 id="1-Objective-C-的内存管理模型？"><a href="#1-Objective-C-的内存管理模型？" class="headerlink" title="1 Objective-C 的内存管理模型？"></a>1 Objective-C 的内存管理模型？</h3><p>MRC(retain, realse) ==》 ARC(strong, weak, copy, assign)<br>引用计数模型</p>
+<h3 id="2-autorealse"><a href="#2-autorealse" class="headerlink" title="2 autorealse"></a>2 autorealse</h3><h3 id="3-NSString-变量的赋值-是否共用同一份内存"><a href="#3-NSString-变量的赋值-是否共用同一份内存" class="headerlink" title="3 NSString 变量的赋值 是否共用同一份内存"></a>3 NSString 变量的赋值 是否共用同一份内存</h3><p>NSString &amp;&amp; NSMutabeString<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">#import &lt;Foundation/Foundation.h&gt;</div><div class="line"></div><div class="line">int main(int argc, const char * argv[]) &#123;</div><div class="line">    @autoreleasepool &#123;</div><div class="line">        </div><div class="line">        NSString *hello = @&quot;hello world&quot;;</div><div class="line">        NSString *world = hello;</div><div class="line">        NSLog(@&quot;1. %p =? %p&quot;, hello, world);</div><div class="line">        NSString *hi = @&quot;hello world&quot;;</div><div class="line">        NSLog(@&quot;2. %p =? %p&quot;,hello, hi);</div><div class="line">        NSString *hei = [NSString stringWithFormat:@&quot;%@&quot;, @&quot;hello world&quot;]; </div><div class="line">        NSLog(@&quot;3. %p =? %p&quot;, hello, hei); //采用类实例化的常量字符串是不同的对象</div><div class="line">        </div><div class="line">        NSMutableString *mutableHello = [NSMutableString stringWithString:hello];</div><div class="line">        NSLog(@&quot;4. %p =? %p&quot;, hello, mutableHello);</div><div class="line">        NSString *hellocopy = [hello copy];</div><div class="line">        NSLog(@&quot;5. %p =? %p&quot;, hello, hellocopy); //同一个对象的两份引用</div><div class="line">        NSMutableString *helloMutableCopy = [hello mutableCopy];</div><div class="line">        NSLog(@&quot;6. %p =? %p&quot;, hello, helloMutableCopy); //终于产生新对象了</div><div class="line">        </div><div class="line">        NSString *mutableHelloCopy = [mutableHello copy];</div><div class="line">        NSLog(@&quot;7. %p =? %p&quot;, mutableHello, mutableHelloCopy); //我们都是新对象</div><div class="line">        NSString *mutableHelloMutableCopy = [mutableHello mutableCopy];</div><div class="line">        NSLog(@&quot;8. %p =? %p&quot;, mutableHello, mutableHelloMutableCopy); //我们都是新对象</div><div class="line">        </div><div class="line">    &#125;</div><div class="line">    return 0;</div><div class="line">&#125;</div><div class="line"></div><div class="line">/*</div><div class="line">2015-12-10 10:32:32.098 Interview[3940:264604] 1. 0x100001048 =? 0x100001048</div><div class="line">2015-12-10 10:32:32.099 Interview[3940:264604] 2. 0x100001048 =? 0x100001048</div><div class="line">2015-12-10 10:32:32.099 Interview[3940:264604] 3. 0x100001048 =? 0x1007000e0</div><div class="line">2015-12-10 10:32:32.099 Interview[3940:264604] 4. 0x100001048 =? 0x1007000a0</div><div class="line">2015-12-10 10:32:32.099 Interview[3940:264604] 5. 0x100001048 =? 0x100001048</div><div class="line">2015-12-10 10:32:32.099 Interview[3940:264604] 6. 0x100001048 =? 0x1007002a0</div><div class="line">2015-12-10 10:32:32.099 Interview[3940:264604] 7. 0x1007000a0 =? 0x1001067f0</div><div class="line">2015-12-10 10:32:32.099 Interview[3940:264604] 8. 0x1007000a0 =? 0x100106810</div><div class="line">Program ended with exit code: 0</div><div class="line">*/</div></pre></td></tr></table></figure></p>
+<p>NSArrary &amp;&amp; NSMutableArrary<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">#import &lt;Foundation/Foundation.h&gt;</div><div class="line"></div><div class="line">int main(int argc, const char * argv[]) &#123;</div><div class="line">    @autoreleasepool &#123;</div><div class="line">        NSArray * array = @[@1, @2];</div><div class="line">        NSArray * arrayCopy = [array copy];</div><div class="line">        NSArray * arrayMutableCopy = [array mutableCopy];</div><div class="line">        NSArray * arrayDeepCopy = [[NSArray alloc] initWithArray:array copyItems:YES];</div><div class="line">        NSLog(@&quot; array = %p&quot;,array);</div><div class="line">        NSLog(@&quot; arrayCopy = %p&quot;,arrayCopy); // I am s shadow</div><div class="line">        NSLog(@&quot; arrayMutableCopy = %p&quot;,arrayMutableCopy);</div><div class="line">        NSLog(@&quot; arrayDeepCopy = %p&quot;,arrayDeepCopy);</div><div class="line">        </div><div class="line">        NSMutableArray * mutableArray = [NSMutableArray arrayWithArray:array];</div><div class="line">        NSMutableArray * mutableArrayCopy = [array copy];</div><div class="line">        NSMutableArray * mutableArrayMutableCopy = [array mutableCopy];</div><div class="line">        NSMutableArray * mutableArrayDeepCopy = [[NSMutableArray alloc] initWithArray:array copyItems:YES];</div><div class="line">        NSLog(@&quot; mutableArray = %p&quot;,mutableArray);</div><div class="line">        NSLog(@&quot; mutableArrayCopy = %p&quot;,mutableArrayCopy);</div><div class="line">        NSLog(@&quot; mutableArrayMutableCopy = %p&quot;,mutableArrayMutableCopy);</div><div class="line">        NSLog(@&quot; mutableArrayDeepCopy = %p&quot;,mutableArrayDeepCopy);</div><div class="line">    &#125;</div><div class="line">    return 0;</div><div class="line">&#125;</div><div class="line">/*</div><div class="line">2015-12-10 14:15:44.061 Interview[4386:341668]  array = 0x100106d30</div><div class="line">2015-12-10 14:15:44.062 Interview[4386:341668]  arrayCopy = 0x100106d30</div><div class="line">2015-12-10 14:15:44.062 Interview[4386:341668]  arrayMutableCopy = 0x1001069f0</div><div class="line">2015-12-10 14:15:44.062 Interview[4386:341668]  arrayDeepCopy = 0x100106da0</div><div class="line">2015-12-10 14:15:44.063 Interview[4386:341668]  mutableArray = 0x100201490</div><div class="line">2015-12-10 14:15:44.063 Interview[4386:341668]  mutableArrayCopy = 0x100106d30</div><div class="line">2015-12-10 14:15:44.063 Interview[4386:341668]  mutableArrayMutableCopy = 0x100203d80</div><div class="line">2015-12-10 14:15:44.063 Interview[4386:341668]  mutableArrayDeepCopy = 0x1002037f0</div><div class="line">Program ended with exit code: 0</div><div class="line">*/</div></pre></td></tr></table></figure></p>
+<p>NSDictionary &amp;&amp; NSMutableDictionary</p>
+<h3 id="4-copy-属性的作用"><a href="#4-copy-属性的作用" class="headerlink" title="4 copy 属性的作用"></a>4 copy 属性的作用</h3><h3 id="5-什么是runtime"><a href="#5-什么是runtime" class="headerlink" title="5 什么是runtime"></a>5 什么是runtime</h3><p>面向对象  动态语言 消息传递</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">OBJC_EXPORT void objc_msgSend(void /* id self, SEL op, ... */ )</div><div class="line">    __OSX_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);</div><div class="line">	</div><div class="line">+ (BOOL)resolveClassMethod:(SEL)sel __OSX_AVAILABLE_STARTING(__MAC_10_5, __IPHONE_2_0);</div><div class="line">+ (BOOL)resolveInstanceMethod:(SEL)sel __OSX_AVAILABLE_STARTING(__MAC_10_5, __IPHONE_2_0);</div><div class="line"></div><div class="line">- (id)forwardingTargetForSelector:(SEL)aSelector __OSX_AVAILABLE_STARTING(__MAC_10_5, __IPHONE_2_0);</div><div class="line"></div><div class="line">- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector OBJC_SWIFT_UNAVAILABLE(&quot;&quot;);</div></pre></td></tr></table></figure>
+<p>程序的执行逻辑在运行时 动态绑定</p>
+<h3 id="6-什么情况下产生引用循环，以及如何避免"><a href="#6-什么情况下产生引用循环，以及如何避免" class="headerlink" title="6 什么情况下产生引用循环，以及如何避免"></a>6 什么情况下产生引用循环，以及如何避免</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">#import &lt;Foundation/Foundation.h&gt;</div><div class="line"></div><div class="line">@interface AObject : NSObject</div><div class="line">- (void)setupEnv;</div><div class="line">@end</div><div class="line"></div><div class="line">@protocol CDelegate &lt;NSObject&gt;</div><div class="line">@optional</div><div class="line">- (void)sayhello;</div><div class="line">@end</div><div class="line"></div><div class="line">@interface BObject : NSObject</div><div class="line">@property (nonatomic, strong) id&lt;CDelegate&gt; delegate;</div><div class="line">@end</div><div class="line"></div><div class="line">@interface AObject () &lt;CDelegate&gt;</div><div class="line">@property (nonatomic, strong) BObject *b;</div><div class="line">@property (nonatomic, copy) void (^hi)();</div><div class="line">@property (nonatomic, copy) NSString *name;</div><div class="line">@end</div><div class="line"></div><div class="line">@implementation AObject</div><div class="line"></div><div class="line">- (void)setupEnv &#123;</div><div class="line">    self.b = [[BObject alloc] init];</div><div class="line">    self.b.delegate = self; // cycle one</div><div class="line">    self.name = @&quot;hello world&quot;;</div><div class="line">    __weak typeof(self) weakSelf = self; //什么时候可能导致weakSelf == nil ?</div><div class="line">    self.hi = ^() &#123;</div><div class="line">        NSLog(@&quot;slef == %@&quot;, weakSelf); // cycle two?</div><div class="line">        NSLog(@&quot;%@&quot;, weakSelf.name);</div><div class="line">    &#125;;   </div><div class="line">&#125;</div><div class="line">@end</div></pre></td></tr></table></figure>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p>【1】<a href="http://stackoverflow.com/questions/27152580/cocoa-blocks-as-strong-pointers-vs-copy" target="_blank" rel="external">http://stackoverflow.com/questions/27152580/cocoa-blocks-as-strong-pointers-vs-copy</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      反思在反思，学习iOS已经好一段时间了，不知道能不能找到工作，已是问问大牛一般面试都会考察一些什么问题。以下就是向大牛学习以及自己平时思考的问题。
+    
+    </summary>
+    
+      <category term="iOS" scheme="https://puzzlefun.github.io/categories/iOS/"/>
+    
+    
+      <category term="Objective-C" scheme="https://puzzlefun.github.io/tags/Objective-C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>InitializaerStruct</title>
+    <link href="https://puzzlefun.github.io/2015/12/02/initializaerStruct/"/>
+    <id>https://puzzlefun.github.io/2015/12/02/initializaerStruct/</id>
+    <published>2015-12-02T11:27:40.000Z</published>
+    <updated>2016-10-26T04:51:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> &#123;</div><div class="line">    <span class="keyword">int</span> z;</div><div class="line">&#125; Point;</div><div class="line"></div><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> &#123;</div><div class="line">    <span class="keyword">int</span> x;</div><div class="line">    <span class="keyword">int</span> y;</div><div class="line">&#125; Point2;</div><div class="line"></div><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> &#123;</div><div class="line">    Point z;</div><div class="line">    Point2 xy;</div><div class="line">&#125; Point3;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">printPoint</span><span class="params">(<span class="keyword">void</span>* <span class="keyword">const</span> p,<span class="keyword">size_t</span> s)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span>* q = (<span class="keyword">int</span>*)p;</div><div class="line">    <span class="keyword">size_t</span> n = s / <span class="keyword">sizeof</span>(<span class="keyword">int</span>);</div><div class="line"></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">size_t</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>, *(q++));</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"\n"</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> * argv[])</span> </span>&#123;</div><div class="line"></div><div class="line">    Point p = &#123;<span class="number">1</span>&#125;;</div><div class="line"></div><div class="line">    Point2 p1 = &#123; <span class="number">2</span>, <span class="number">3</span>&#125;;</div><div class="line">    Point2 p2 = &#123; .x = <span class="number">4</span>, .y = <span class="number">5</span>&#125;;</div><div class="line"></div><div class="line">    Point3 p3 = &#123; <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>&#125;;</div><div class="line">    Point3 p4 = &#123; &#123;<span class="number">8</span>&#125;, &#123;<span class="number">6</span>,<span class="number">7</span>&#125;&#125;;</div><div class="line">    Point3 p5 = &#123; .xy = &#123;<span class="number">6</span>,<span class="number">7</span>&#125; , .z = &#123;<span class="number">8</span>&#125;&#125;;</div><div class="line">    Point3 p6 = &#123; .xy = &#123;.x=<span class="number">6</span>, .y = <span class="number">7</span>&#125;, .z = &#123;.z = <span class="number">8</span>&#125;&#125;;</div><div class="line">    Point3 p7 = &#123; .xy =&#123;<span class="number">6</span>,<span class="number">7</span>&#125;, .z = &#123;<span class="number">8</span>&#125;&#125;;</div><div class="line">    Point3 p8 = &#123; xy : &#123;<span class="number">6</span>,<span class="number">7</span>&#125;, z : &#123;<span class="number">8</span>&#125;&#125;;</div><div class="line"></div><div class="line">    printPoint(&amp;p, <span class="keyword">sizeof</span>(Point));</div><div class="line"></div><div class="line">    printPoint(&amp;p1, <span class="keyword">sizeof</span>(Point2));</div><div class="line">    printPoint(&amp;p2, <span class="keyword">sizeof</span>(Point2));</div><div class="line"></div><div class="line">    printPoint(&amp;p3, <span class="keyword">sizeof</span>(Point3));</div><div class="line">    printPoint(&amp;p4, <span class="keyword">sizeof</span>(Point3));</div><div class="line">    printPoint(&amp;p5, <span class="keyword">sizeof</span>(Point3));</div><div class="line">    printPoint(&amp;p6, <span class="keyword">sizeof</span>(Point3));</div><div class="line">    printPoint(&amp;p7, <span class="keyword">sizeof</span>(Point3));</div><div class="line">    printPoint(&amp;p8, <span class="keyword">sizeof</span>(Point3));</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">/*</span></div><div class="line">//out put</div><div class="line">1 </div><div class="line">2 3 </div><div class="line">4 5 </div><div class="line">6 7 8 </div><div class="line">8 6 7 </div><div class="line">8 6 7 </div><div class="line">8 6 7 </div><div class="line">8 6 7 </div><div class="line">8 6 7 </div><div class="line">Program ended with exit code: 0</div><div class="line">*/</div></pre></td></tr></table></figure>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p>【1】<a href="https://gcc.gnu.org/onlinedocs/gcc/Designated-Inits.html" target="_blank" rel="external">GNU</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      Struct初始化其实也可以充满艺术
+    
+    </summary>
+    
+    
+      <category term="C++" scheme="https://puzzlefun.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Security</title>
+    <link href="https://puzzlefun.github.io/2015/11/07/security/"/>
+    <id>https://puzzlefun.github.io/2015/11/07/security/</id>
+    <published>2015-11-07T10:53:13.000Z</published>
+    <updated>2016-10-26T05:32:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h2 id="专有名词"><a href="#专有名词" class="headerlink" title="专有名词"></a>专有名词</h2><ul>
+<li>信息（information, message）：定义很多，建议查看维基百科，简单理解为信息是某个主体关注的东西。</li>
+<li>安全（security ）:</li>
+<li>centification authorization authentification audit<br>encrypt decrypt abstract<br>cryptogram</li>
+</ul>
+<h2 id="安全技术"><a href="#安全技术" class="headerlink" title="安全技术"></a>安全技术</h2><p>加密&lt;=&gt;解密<br>摘要算法 MD5 SHA<br>对称加密解密算法<br>DES<br>非对称加密解密算法<br>RSA<br>常用安全策略<br>常用安全协议<br>TSL SSL<br>数据结构<br>x.509 v3<br>安全组织结构<br>PKI<br>安全软件<br>openSSL</p>
+<h2 id="代码签名"><a href="#代码签名" class="headerlink" title="代码签名"></a>代码签名</h2><p>codesign<br>secutity<br>openssl<br>uzip<br>md5 / sha</p>
+<h3 id="查看可以使用的签名证书"><a href="#查看可以使用的签名证书" class="headerlink" title="查看可以使用的签名证书"></a>查看可以使用的签名证书</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">security find-identity -v -p codesiging</div></pre></td></tr></table></figure>
+<h3 id="查看mobilprovision"><a href="#查看mobilprovision" class="headerlink" title="查看mobilprovision"></a>查看mobilprovision</h3><p>security cms -D -i embedded.mobileprovision</p>
+]]></content>
+    
+    <summary type="html">
+    
+      利益，好奇都是对安全造成威胁的原因，本文对于原因不感兴趣，主要是介绍目前计算机科学中运用的信息安全技术。由于本人的知识有限，涉及不深，故在此抛砖引玉。
+    
+    </summary>
+    
+      <category term="Dictionary" scheme="https://puzzlefun.github.io/categories/Dictionary/"/>
+    
+    
+      <category term="Security" scheme="https://puzzlefun.github.io/tags/Security/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>media</title>
+    <link href="https://puzzlefun.github.io/2015/10/30/media/"/>
+    <id>https://puzzlefun.github.io/2015/10/30/media/</id>
+    <published>2015-10-30T08:34:42.000Z</published>
+    <updated>2016-10-26T04:51:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h2 id="Text"><a href="#Text" class="headerlink" title="Text"></a>Text</h2><h2 id="Image-图片"><a href="#Image-图片" class="headerlink" title="Image (图片)"></a>Image (图片)</h2><h2 id="Audio（音频）"><a href="#Audio（音频）" class="headerlink" title="Audio（音频）"></a>Audio（音频）</h2><h2 id="Vedio（视频）"><a href="#Vedio（视频）" class="headerlink" title="Vedio（视频）"></a>Vedio（视频）</h2>]]></content>
+    
+    <summary type="html">
+    
+      多媒体
+    
+    </summary>
+    
+      <category term="iOS" scheme="https://puzzlefun.github.io/categories/iOS/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Thread</title>
+    <link href="https://puzzlefun.github.io/2015/10/22/Thread/"/>
+    <id>https://puzzlefun.github.io/2015/10/22/Thread/</id>
+    <published>2015-10-22T12:52:41.000Z</published>
+    <updated>2016-10-26T04:51:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>线程</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h2 id="NSThread"><a href="#NSThread" class="headerlink" title="NSThread"></a>NSThread</h2><h2 id="NSOperation"><a href="#NSOperation" class="headerlink" title="NSOperation"></a>NSOperation</h2><h2 id="GCD"><a href="#GCD" class="headerlink" title="GCD"></a>GCD</h2><h2 id="UIApplication"><a href="#UIApplication" class="headerlink" title="UIApplication"></a>UIApplication</h2><h2 id="NSTImer"><a href="#NSTImer" class="headerlink" title="NSTImer"></a>NSTImer</h2><h2 id="NSRunLoop"><a href="#NSRunLoop" class="headerlink" title="NSRunLoop"></a>NSRunLoop</h2><h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><p>同步：（Synchronization），指在一个系统中所发生的事件（event），之间进行协调，在时间上出现一致性与统一化的现象。<br>停止、等待<br>异步：（Asynchronous）立即返回、通知<br>并发/并行：</p>
+<h2 id="NSThread-1"><a href="#NSThread-1" class="headerlink" title="NSThread"></a>NSThread</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;线程&lt;/p&gt;
+&lt;h2 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;
+    
+    </summary>
+    
+      <category term="iOS" scheme="https://puzzlefun.github.io/categories/iOS/"/>
+    
+    
+      <category term="Objective-C" scheme="https://puzzlefun.github.io/tags/Objective-C/"/>
+    
+  </entry>
+  
+</feed>
