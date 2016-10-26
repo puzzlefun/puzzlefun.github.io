@@ -70,7 +70,7 @@ ga('send', 'pageview');
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Søk"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://puzzlefun.github.io"></form>
@@ -104,7 +104,7 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
         <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
@@ -153,13 +153,13 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>预备环境：<br>macOS jailbreak iOS </p>
-<p>1 拷贝debugserver 至Mac 本地<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">scp root@&#123;iOS ip&#125;:/Developer/usr/bin/debugserver ~/debugserver</div><div class="line">lipo -thin arm64 ~/debugserver -output ~/debugserver</div></pre></td></tr></table></figure></p>
-<p>2 给debugserver 添加 task_for_pid 权限<br>新建文件 ent.xml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;plist version=&quot;1.0&quot;&gt;</div><div class="line">&lt;dict&gt;</div><div class="line">&lt;key&gt;com.apple.springboard.debugapplications&lt;/key&gt;</div><div class="line">&lt;true/&gt;</div><div class="line">&lt;key&gt;get-task-allow&lt;/key&gt;</div><div class="line">&lt;true/&gt;</div><div class="line">&lt;key&gt;task_for_pid-allow&lt;/key&gt;</div><div class="line">&lt;true/&gt;</div><div class="line">&lt;key&gt;run-unsigned-code&lt;/key&gt;</div><div class="line">&lt;true/&gt;</div><div class="line">&lt;/dict&gt;</div><div class="line">&lt;/plist&gt;</div></pre></td></tr></table></figure></p>
+        <p>&#x9884;&#x5907;&#x73AF;&#x5883;&#xFF1A;<br>macOS jailbreak iOS </p>
+<p>1 &#x62F7;&#x8D1D;debugserver &#x81F3;Mac &#x672C;&#x5730;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">scp root@{iOS ip}:/Developer/usr/bin/debugserver ~/debugserver</div><div class="line">lipo -thin arm64 ~/debugserver -output ~/debugserver</div></pre></td></tr></table></figure></p>
+<p>2 &#x7ED9;debugserver &#x6DFB;&#x52A0; task_for_pid &#x6743;&#x9650;<br>&#x65B0;&#x5EFA;&#x6587;&#x4EF6; ent.xml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;plist version=&quot;1.0&quot;&gt;</div><div class="line">&lt;dict&gt;</div><div class="line">&lt;key&gt;com.apple.springboard.debugapplications&lt;/key&gt;</div><div class="line">&lt;true/&gt;</div><div class="line">&lt;key&gt;get-task-allow&lt;/key&gt;</div><div class="line">&lt;true/&gt;</div><div class="line">&lt;key&gt;task_for_pid-allow&lt;/key&gt;</div><div class="line">&lt;true/&gt;</div><div class="line">&lt;key&gt;run-unsigned-code&lt;/key&gt;</div><div class="line">&lt;true/&gt;</div><div class="line">&lt;/dict&gt;</div><div class="line">&lt;/plist&gt;</div></pre></td></tr></table></figure></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ldid -Sent.xml debugserver</div></pre></td></tr></table></figure>
-<p>3 将处理过后的 debugserver 拷贝会 iOS<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">scp ~/debugserver root@&#123;iOS ip&#125;:/usr/bin/debugserver</div><div class="line">ssh root@&#123;iOS IP&#125;</div><div class="line">chmod +x /usr/bin/debugserver</div></pre></td></tr></table></figure></p>
-<p>常看 库支持的架构 lipo -info {bin}</p>
-<h2 id="使用-debugserver"><a href="#使用-debugserver" class="headerlink" title="使用 debugserver"></a>使用 debugserver</h2><p>相关知识：<br>ssh<br>scp<br>lipo<br>ldid</p>
+<p>3 &#x5C06;&#x5904;&#x7406;&#x8FC7;&#x540E;&#x7684; debugserver &#x62F7;&#x8D1D;&#x4F1A; iOS<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">scp ~/debugserver root@{iOS ip}:/usr/bin/debugserver</div><div class="line">ssh root@{iOS IP}</div><div class="line">chmod +x /usr/bin/debugserver</div></pre></td></tr></table></figure></p>
+<p>&#x5E38;&#x770B; &#x5E93;&#x652F;&#x6301;&#x7684;&#x67B6;&#x6784; lipo -info {bin}</p>
+<h2 id="&#x4F7F;&#x7528;-debugserver"><a href="#&#x4F7F;&#x7528;-debugserver" class="headerlink" title="&#x4F7F;&#x7528; debugserver"></a>&#x4F7F;&#x7528; debugserver</h2><p>&#x76F8;&#x5173;&#x77E5;&#x8BC6;&#xFF1A;<br>ssh<br>scp<br>lipo<br>ldid</p>
 <h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2><ul>
 <li><a href="http://bbs.iosre.com/t/debugserver-lldb-gdb/65" target="_blank" rel="external">http://bbs.iosre.com/t/debugserver-lldb-gdb/65</a></li>
 <li><a href="http://www.cnblogs.com/ludashi/p/5730338.html" target="_blank" rel="external">http://www.cnblogs.com/ludashi/p/5730338.html</a></li>
@@ -253,24 +253,24 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Apple-LLVM-compiler"><a href="#Apple-LLVM-compiler" class="headerlink" title="Apple LLVM compiler"></a>Apple LLVM compiler</h2><h3 id="Warning-Flag-语法"><a href="#Warning-Flag-语法" class="headerlink" title="Warning Flag 语法"></a>Warning Flag 语法</h3><ul>
-<li>-Wfoo 开启 foo，foo表示一类或者一组警告</li>
-<li>-Wno-foo 关闭 foo 警告</li>
-<li>-w 关闭所有的警告</li>
+        <h2 id="Apple-LLVM-compiler"><a href="#Apple-LLVM-compiler" class="headerlink" title="Apple LLVM compiler"></a>Apple LLVM compiler</h2><h3 id="Warning-Flag-&#x8BED;&#x6CD5;"><a href="#Warning-Flag-&#x8BED;&#x6CD5;" class="headerlink" title="Warning Flag &#x8BED;&#x6CD5;"></a>Warning Flag &#x8BED;&#x6CD5;</h3><ul>
+<li>-Wfoo &#x5F00;&#x542F; foo&#xFF0C;foo&#x8868;&#x793A;&#x4E00;&#x7C7B;&#x6216;&#x8005;&#x4E00;&#x7EC4;&#x8B66;&#x544A;</li>
+<li>-Wno-foo &#x5173;&#x95ED; foo &#x8B66;&#x544A;</li>
+<li>-w &#x5173;&#x95ED;&#x6240;&#x6709;&#x7684;&#x8B66;&#x544A;</li>
 </ul>
-<h3 id="设置-Warning-Errors"><a href="#设置-Warning-Errors" class="headerlink" title="设置 Warning = Errors"></a>设置 Warning = Errors</h3><p>//.xccongig<br>GCC_TREAT_WARNINGS_AS_ERRORS = YES<br>// cms-ling<br>-Werror</p>
-<h3 id="编译器给出的几类警告："><a href="#编译器给出的几类警告：" class="headerlink" title="编译器给出的几类警告："></a>编译器给出的几类警告：</h3><ul>
+<h3 id="&#x8BBE;&#x7F6E;-Warning-Errors"><a href="#&#x8BBE;&#x7F6E;-Warning-Errors" class="headerlink" title="&#x8BBE;&#x7F6E; Warning = Errors"></a>&#x8BBE;&#x7F6E; Warning = Errors</h3><p>//.xccongig<br>GCC_TREAT_WARNINGS_AS_ERRORS = YES<br>// cms-ling<br>-Werror</p>
+<h3 id="&#x7F16;&#x8BD1;&#x5668;&#x7ED9;&#x51FA;&#x7684;&#x51E0;&#x7C7B;&#x8B66;&#x544A;&#xFF1A;"><a href="#&#x7F16;&#x8BD1;&#x5668;&#x7ED9;&#x51FA;&#x7684;&#x51E0;&#x7C7B;&#x8B66;&#x544A;&#xFF1A;" class="headerlink" title="&#x7F16;&#x8BD1;&#x5668;&#x7ED9;&#x51FA;&#x7684;&#x51E0;&#x7C7B;&#x8B66;&#x544A;&#xFF1A;"></a>&#x7F16;&#x8BD1;&#x5668;&#x7ED9;&#x51FA;&#x7684;&#x51E0;&#x7C7B;&#x8B66;&#x544A;&#xFF1A;</h3><ul>
 <li>A valid issue =&gt; Fix the issue</li>
-<li>你不关心的，或者无意义的警告 =&gt; 关闭 局部或者全局 警告</li>
-<li>你不理解的警告 =&gt; 弄明白，否者你永远不明白</li>
+<li>&#x4F60;&#x4E0D;&#x5173;&#x5FC3;&#x7684;&#xFF0C;&#x6216;&#x8005;&#x65E0;&#x610F;&#x4E49;&#x7684;&#x8B66;&#x544A; =&gt; &#x5173;&#x95ED; &#x5C40;&#x90E8;&#x6216;&#x8005;&#x5168;&#x5C40; &#x8B66;&#x544A;</li>
+<li>&#x4F60;&#x4E0D;&#x7406;&#x89E3;&#x7684;&#x8B66;&#x544A; =&gt; &#x5F04;&#x660E;&#x767D;&#xFF0C;&#x5426;&#x8005;&#x4F60;&#x6C38;&#x8FDC;&#x4E0D;&#x660E;&#x767D;</li>
 </ul>
-<h3 id="常见的警告组合"><a href="#常见的警告组合" class="headerlink" title="常见的警告组合"></a>常见的警告组合</h3><p>-Wall<br>-Wextra<br>-Wpedantic<br>-Weverything<br>-Wshadow<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> ( <span class="number">1</span> == <span class="number">1</span> ) &#123;</div><div class="line">        <span class="keyword">int</span> argc = <span class="number">9</span>;</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"integere is %d"</span>, argc);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>-Wfloat-equal 浮点数相等比较<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">float</span> a = <span class="number">2.0</span></div><div class="line">flaot b = <span class="number">3.1</span></div><div class="line"><span class="keyword">if</span> (a == b) &#123;</div><div class="line">    <span class="comment">// TODO</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>-Wundef #if 中使用了未定义的符号<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">if</span> THIS_HAS_NOT_BEEN_DEFINED</span></div></pre></td></tr></table></figure></p>
-<p>-Wempty-body if else do while 不会执行的代码段<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (<span class="number">1</span> == <span class="number">2</span>) &#123;</div><div class="line">    <span class="comment">// TODO</span></div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">    <span class="comment">// When invoke?</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>-Wnewline-eof 文件的结尾符不是空行</p>
-<p>Clang 中新的 警告 类型<br>-Wobjc-literal-compare<br>-Warc-repeated-use-of-weak</p>
-<h3 id="关闭-警告"><a href="#关闭-警告" class="headerlink" title="关闭 警告"></a>关闭 警告</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">#pragma clang diagnostic push</div><div class="line">#pragma clang diagnostic ignore &quot;-Wstupid-method-name&quot;</div><div class="line"></div><div class="line">- (BOOL)doTheThingWithTheOtherThing &#123;</div><div class="line">    // TODO</div><div class="line">&#125;</div><div class="line"></div><div class="line">#pragma clang diagnostic pop</div><div class="line"></div><div class="line">- (void)doThingWithObject(NSObject * __attribute__((unused)))thingie &#123;</div><div class="line">    // TODO</div><div class="line">&#125;</div><div class="line"></div><div class="line">- (void)doThingWithObject(NSObject * __unused)thingie &#123;</div><div class="line">    // TODO</div><div class="line">&#125;</div><div class="line"></div><div class="line">- (void)doThingWithObject(NSObject *)thingie &#123;</div><div class="line">    #pragma unused(thingie)</div><div class="line">    // TODO</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="&#x5E38;&#x89C1;&#x7684;&#x8B66;&#x544A;&#x7EC4;&#x5408;"><a href="#&#x5E38;&#x89C1;&#x7684;&#x8B66;&#x544A;&#x7EC4;&#x5408;" class="headerlink" title="&#x5E38;&#x89C1;&#x7684;&#x8B66;&#x544A;&#x7EC4;&#x5408;"></a>&#x5E38;&#x89C1;&#x7684;&#x8B66;&#x544A;&#x7EC4;&#x5408;</h3><p>-Wall<br>-Wextra<br>-Wpedantic<br>-Weverything<br>-Wshadow<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span> </span>{</div><div class="line">    <span class="keyword">if</span> ( <span class="number">1</span> == <span class="number">1</span> ) {</div><div class="line">        <span class="keyword">int</span> argc = <span class="number">9</span>;</div><div class="line">        <span class="built_in">printf</span>(<span class="string">&quot;integere is %d&quot;</span>, argc);</div><div class="line">    }</div><div class="line">}</div></pre></td></tr></table></figure></p>
+<p>-Wfloat-equal &#x6D6E;&#x70B9;&#x6570;&#x76F8;&#x7B49;&#x6BD4;&#x8F83;<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">float</span> a = <span class="number">2.0</span></div><div class="line">flaot b = <span class="number">3.1</span></div><div class="line"><span class="keyword">if</span> (a == b) {</div><div class="line">    <span class="comment">// TODO</span></div><div class="line">}</div></pre></td></tr></table></figure></p>
+<p>-Wundef #if &#x4E2D;&#x4F7F;&#x7528;&#x4E86;&#x672A;&#x5B9A;&#x4E49;&#x7684;&#x7B26;&#x53F7;<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">if</span> THIS_HAS_NOT_BEEN_DEFINED</span></div></pre></td></tr></table></figure></p>
+<p>-Wempty-body if else do while &#x4E0D;&#x4F1A;&#x6267;&#x884C;&#x7684;&#x4EE3;&#x7801;&#x6BB5;<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (<span class="number">1</span> == <span class="number">2</span>) {</div><div class="line">    <span class="comment">// TODO</span></div><div class="line">} <span class="keyword">else</span> {</div><div class="line">    <span class="comment">// When invoke?</span></div><div class="line">}</div></pre></td></tr></table></figure></p>
+<p>-Wnewline-eof &#x6587;&#x4EF6;&#x7684;&#x7ED3;&#x5C3E;&#x7B26;&#x4E0D;&#x662F;&#x7A7A;&#x884C;</p>
+<p>Clang &#x4E2D;&#x65B0;&#x7684; &#x8B66;&#x544A; &#x7C7B;&#x578B;<br>-Wobjc-literal-compare<br>-Warc-repeated-use-of-weak</p>
+<h3 id="&#x5173;&#x95ED;-&#x8B66;&#x544A;"><a href="#&#x5173;&#x95ED;-&#x8B66;&#x544A;" class="headerlink" title="&#x5173;&#x95ED; &#x8B66;&#x544A;"></a>&#x5173;&#x95ED; &#x8B66;&#x544A;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">#pragma clang diagnostic push</div><div class="line">#pragma clang diagnostic ignore &quot;-Wstupid-method-name&quot;</div><div class="line"></div><div class="line">- (BOOL)doTheThingWithTheOtherThing {</div><div class="line">    // TODO</div><div class="line">}</div><div class="line"></div><div class="line">#pragma clang diagnostic pop</div><div class="line"></div><div class="line">- (void)doThingWithObject(NSObject * __attribute__((unused)))thingie {</div><div class="line">    // TODO</div><div class="line">}</div><div class="line"></div><div class="line">- (void)doThingWithObject(NSObject * __unused)thingie {</div><div class="line">    // TODO</div><div class="line">}</div><div class="line"></div><div class="line">- (void)doThingWithObject(NSObject *)thingie {</div><div class="line">    #pragma unused(thingie)</div><div class="line">    // TODO</div><div class="line">}</div></pre></td></tr></table></figure>
 <p>add Complier Flags -W</p>
 <h2 id="Function-Attribute-attribute-attribute-list"><a href="#Function-Attribute-attribute-attribute-list" class="headerlink" title="Function Attribute attribute ((attribute-list))"></a>Function Attribute <strong>attribute</strong> ((attribute-list))</h2><h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2><ul>
 <li><a href="https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html" target="_blank" rel="external">https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html</a></li>
@@ -324,7 +324,7 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id=""><a href="#" class="headerlink" title=""></a>
+        <h2 id=""><a href="#" class="headerlink" title=""></a></h2>
         
           <p class="article-more-link">
             <a href="/2016/03/16/xcode/#more">Read More</a>
@@ -429,7 +429,7 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
         <p>frame anchor position center size bound</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2>
         
           <p class="article-more-link">
             <a href="/2016/03/02/coordinate/#more">Read More</a>
@@ -477,28 +477,28 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="解析Crash准备的材料"><a href="#解析Crash准备的材料" class="headerlink" title="解析Crash准备的材料"></a>解析Crash准备的材料</h2><ul>
-<li>原材料：Crash log </li>
-<li>辅料： dysm 和 app</li>
-<li>工具： symbolicatecrash, otool, xcrun, atos</li>
+        <h2 id="&#x89E3;&#x6790;Crash&#x51C6;&#x5907;&#x7684;&#x6750;&#x6599;"><a href="#&#x89E3;&#x6790;Crash&#x51C6;&#x5907;&#x7684;&#x6750;&#x6599;" class="headerlink" title="&#x89E3;&#x6790;Crash&#x51C6;&#x5907;&#x7684;&#x6750;&#x6599;"></a>&#x89E3;&#x6790;Crash&#x51C6;&#x5907;&#x7684;&#x6750;&#x6599;</h2><ul>
+<li>&#x539F;&#x6750;&#x6599;&#xFF1A;Crash log </li>
+<li>&#x8F85;&#x6599;&#xFF1A; dysm &#x548C; app</li>
+<li>&#x5DE5;&#x5177;&#xFF1A; symbolicatecrash, otool, xcrun, atos</li>
 </ul>
-<h2 id="收集材料"><a href="#收集材料" class="headerlink" title="收集材料"></a>收集材料</h2><ul>
-<li>（Xcode）Windows -&gt; Device -&gt; View Device Logs </li>
-<li>Log 收集第三方平台</li>
-<li>打包应用时的 .xcarchive(dysm, app)</li>
+<h2 id="&#x6536;&#x96C6;&#x6750;&#x6599;"><a href="#&#x6536;&#x96C6;&#x6750;&#x6599;" class="headerlink" title="&#x6536;&#x96C6;&#x6750;&#x6599;"></a>&#x6536;&#x96C6;&#x6750;&#x6599;</h2><ul>
+<li>&#xFF08;Xcode&#xFF09;Windows -&gt; Device -&gt; View Device Logs </li>
+<li>Log &#x6536;&#x96C6;&#x7B2C;&#x4E09;&#x65B9;&#x5E73;&#x53F0;</li>
+<li>&#x6253;&#x5305;&#x5E94;&#x7528;&#x65F6;&#x7684; .xcarchive(dysm, app)</li>
 </ul>
-<h2 id="第一道菜-Symbolicatecrash"><a href="#第一道菜-Symbolicatecrash" class="headerlink" title="第一道菜 Symbolicatecrash"></a>第一道菜 Symbolicatecrash</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">find /Applications/Xcode.app -name symbolicatecrash -type f</div><div class="line"></div><div class="line">/Applications/Xcode.app/Contents/SharedFrameworks/DTDeviceKitBase.framework/Versions/A/Resources/symbolicatecrash</div></pre></td></tr></table></figure>
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">/Applications/Xcode.app/Contents/SharedFrameworks/DTDeviceKitBase.framework/Versions/A/Resources/symbolicatecrash 56ae4a1e0feaad87628b4c8e.crash ThumbDoctor.app.dSYM &gt; crash.txt</div><div class="line"></div><div class="line">---</div><div class="line">## Warning: Unable to symbolicate from required binary: /Users/lkeg/Library/Developer/Xcode/iOS DeviceSupport/8.3 (12F70)/Symbols/System/Library/Frameworks/CoreLocation.framework/CoreLocation</div><div class="line">---</div><div class="line"></div><div class="line">出现</div><div class="line">----</div><div class="line">Error: &quot;DEVELOPER_DIR&quot; is not defined at /Applications/Xcode.app/Contents/SharedFrameworks/DTDeviceKitBase.framework/Versions/A/Resources/symbolicatecrash line 60.</div><div class="line">----</div><div class="line"></div><div class="line">export DEVELOPER_DIR=&quot;/Applications/XCode.app/Contents/Developer&quot;</div></pre></td></tr></table></figure>
-<h2 id="第二道菜-符号地址逐行解析"><a href="#第二道菜-符号地址逐行解析" class="headerlink" title="第二道菜 符号地址逐行解析"></a>第二道菜 符号地址逐行解析</h2><p>起始地址：即使每次iOS app启动都会加载(main module)主模块在不同的内存地址（大多数情况下32bit框架对应的地址是0x4000、64bit框架对应的地址为0x0000000100000000）。</p>
+<h2 id="&#x7B2C;&#x4E00;&#x9053;&#x83DC;-Symbolicatecrash"><a href="#&#x7B2C;&#x4E00;&#x9053;&#x83DC;-Symbolicatecrash" class="headerlink" title="&#x7B2C;&#x4E00;&#x9053;&#x83DC; Symbolicatecrash"></a>&#x7B2C;&#x4E00;&#x9053;&#x83DC; Symbolicatecrash</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">find /Applications/Xcode.app -name symbolicatecrash -type f</div><div class="line"></div><div class="line">/Applications/Xcode.app/Contents/SharedFrameworks/DTDeviceKitBase.framework/Versions/A/Resources/symbolicatecrash</div></pre></td></tr></table></figure>
+<h2 id="&#x5206;&#x6790;"><a href="#&#x5206;&#x6790;" class="headerlink" title="&#x5206;&#x6790;"></a>&#x5206;&#x6790;</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">/Applications/Xcode.app/Contents/SharedFrameworks/DTDeviceKitBase.framework/Versions/A/Resources/symbolicatecrash 56ae4a1e0feaad87628b4c8e.crash ThumbDoctor.app.dSYM &gt; crash.txt</div><div class="line"></div><div class="line">---</div><div class="line">## Warning: Unable to symbolicate from required binary: /Users/lkeg/Library/Developer/Xcode/iOS DeviceSupport/8.3 (12F70)/Symbols/System/Library/Frameworks/CoreLocation.framework/CoreLocation</div><div class="line">---</div><div class="line"></div><div class="line">&#x51FA;&#x73B0;</div><div class="line">----</div><div class="line">Error: &quot;DEVELOPER_DIR&quot; is not defined at /Applications/Xcode.app/Contents/SharedFrameworks/DTDeviceKitBase.framework/Versions/A/Resources/symbolicatecrash line 60.</div><div class="line">----</div><div class="line"></div><div class="line">export DEVELOPER_DIR=&quot;/Applications/XCode.app/Contents/Developer&quot;</div></pre></td></tr></table></figure>
+<h2 id="&#x7B2C;&#x4E8C;&#x9053;&#x83DC;-&#x7B26;&#x53F7;&#x5730;&#x5740;&#x9010;&#x884C;&#x89E3;&#x6790;"><a href="#&#x7B2C;&#x4E8C;&#x9053;&#x83DC;-&#x7B26;&#x53F7;&#x5730;&#x5740;&#x9010;&#x884C;&#x89E3;&#x6790;" class="headerlink" title="&#x7B2C;&#x4E8C;&#x9053;&#x83DC; &#x7B26;&#x53F7;&#x5730;&#x5740;&#x9010;&#x884C;&#x89E3;&#x6790;"></a>&#x7B2C;&#x4E8C;&#x9053;&#x83DC; &#x7B26;&#x53F7;&#x5730;&#x5740;&#x9010;&#x884C;&#x89E3;&#x6790;</h2><p>&#x8D77;&#x59CB;&#x5730;&#x5740;&#xFF1A;&#x5373;&#x4F7F;&#x6BCF;&#x6B21;iOS app&#x542F;&#x52A8;&#x90FD;&#x4F1A;&#x52A0;&#x8F7D;(main module)&#x4E3B;&#x6A21;&#x5757;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x5185;&#x5B58;&#x5730;&#x5740;&#xFF08;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;32bit&#x6846;&#x67B6;&#x5BF9;&#x5E94;&#x7684;&#x5730;&#x5740;&#x662F;0x4000&#x3001;64bit&#x6846;&#x67B6;&#x5BF9;&#x5E94;&#x7684;&#x5730;&#x5740;&#x4E3A;0x0000000100000000&#xFF09;&#x3002;</p>
 <ul>
 <li>cd xx.app</li>
 <li><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">    otool -arch arm64 -l xxx.app/xxx  | grep -B 1 -A 10 &quot;LC_SEGM&quot; | grep -B 3 -A 8 &quot;__TEXT&quot;</div><div class="line">    </div><div class="line">    Load command 1</div><div class="line">     cmd LC_SEGMENT_64</div><div class="line"> cmdsize 952</div><div class="line"> segname __TEXT</div><div class="line">  vmaddr 0x0000000100000000</div><div class="line">  vmsize 0x00000000000b8000</div><div class="line"> fileoff 0</div><div class="line">filesize 753664</div><div class="line"> maxprot 0x00000005</div><div class="line">initprot 0x00000005</div><div class="line">  nsects 11</div><div class="line">   flags 0x0</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>其中 vmaddr 0x0000000100000000 地址便为我们所要的app运行起始地址。</p>
-<h3 id="计算-symbol-address"><a href="#计算-symbol-address" class="headerlink" title="计算 symbol address"></a>计算 symbol address</h3><p>symbol address = 地址偏移量＋起始地址。<br>起始地址上面我们已经得到，地址偏移量就是单行信息中“+”号后面的数值。</p>
-<h3 id="解析-symbol-address"><a href="#解析-symbol-address" class="headerlink" title="解析 symbol address"></a>解析 symbol address</h3><p>xcrun atos –arch arm64 -o xxx.app/xxx [addresss]</p>
-<h3 id="load-address-相对偏移解析"><a href="#load-address-相对偏移解析" class="headerlink" title="load address 相对偏移解析"></a>load address 相对偏移解析</h3><p>xcrun atos –arch arm64 -o xxx.app/xxx -l [address] [address]</p>
+<p>&#x5176;&#x4E2D; vmaddr 0x0000000100000000 &#x5730;&#x5740;&#x4FBF;&#x4E3A;&#x6211;&#x4EEC;&#x6240;&#x8981;&#x7684;app&#x8FD0;&#x884C;&#x8D77;&#x59CB;&#x5730;&#x5740;&#x3002;</p>
+<h3 id="&#x8BA1;&#x7B97;-symbol-address"><a href="#&#x8BA1;&#x7B97;-symbol-address" class="headerlink" title="&#x8BA1;&#x7B97; symbol address"></a>&#x8BA1;&#x7B97; symbol address</h3><p>symbol address = &#x5730;&#x5740;&#x504F;&#x79FB;&#x91CF;&#xFF0B;&#x8D77;&#x59CB;&#x5730;&#x5740;&#x3002;<br>&#x8D77;&#x59CB;&#x5730;&#x5740;&#x4E0A;&#x9762;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x5F97;&#x5230;&#xFF0C;&#x5730;&#x5740;&#x504F;&#x79FB;&#x91CF;&#x5C31;&#x662F;&#x5355;&#x884C;&#x4FE1;&#x606F;&#x4E2D;&#x201C;+&#x201D;&#x53F7;&#x540E;&#x9762;&#x7684;&#x6570;&#x503C;&#x3002;</p>
+<h3 id="&#x89E3;&#x6790;-symbol-address"><a href="#&#x89E3;&#x6790;-symbol-address" class="headerlink" title="&#x89E3;&#x6790; symbol address"></a>&#x89E3;&#x6790; symbol address</h3><p>xcrun atos &#x2013;arch arm64 -o xxx.app/xxx [addresss]</p>
+<h3 id="load-address-&#x76F8;&#x5BF9;&#x504F;&#x79FB;&#x89E3;&#x6790;"><a href="#load-address-&#x76F8;&#x5BF9;&#x504F;&#x79FB;&#x89E3;&#x6790;" class="headerlink" title="load address &#x76F8;&#x5BF9;&#x504F;&#x79FB;&#x89E3;&#x6790;"></a>load address &#x76F8;&#x5BF9;&#x504F;&#x79FB;&#x89E3;&#x6790;</h3><p>xcrun atos &#x2013;arch arm64 -o xxx.app/xxx -l [address] [address]</p>
 <h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2><ul>
 <li><a href="https://www.plcrashreporter.org/" target="_blank" rel="external">https://www.plcrashreporter.org/</a></li>
 </ul>
@@ -545,7 +545,7 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id=""><a href="#" class="headerlink" title=""></a>
+        <h2 id=""><a href="#" class="headerlink" title=""></a></h2>
         
           <p class="article-more-link">
             <a href="/2016/01/27/TodayWidget/#more">Read More</a>
@@ -591,7 +591,7 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="URL-Scheme"><a href="#URL-Scheme" class="headerlink" title="URL Scheme"></a>URL Scheme</h2><p>完整的：<br>scheme://user:password@host:port/path?query#fragment<br>简化的：<br>scheme://host/path?query</p>
+        <h2 id="URL-Scheme"><a href="#URL-Scheme" class="headerlink" title="URL Scheme"></a>URL Scheme</h2><p>&#x5B8C;&#x6574;&#x7684;&#xFF1A;<br>scheme://user:password@host:port/path?query#fragment<br>&#x7B80;&#x5316;&#x7684;&#xFF1A;<br>scheme://host/path?query</p>
 <p>NSURL<br>NSURLComponents<br>@interface NSString (NSURLUtilities)</p>
 <p>// Returns a new string made from the receiver by replacing all characters not in the allowedCharacters set with percent encoded characters. UTF-8 encoding is used to determine the correct percent encoded characters. Entire URL strings cannot be percent-encoded. This method is intended to percent-encode an URL component or subcomponent string, NOT the entire URL string. Any characters in allowedCharacters outside of the 7-bit ASCII range are ignored.</p>
 <ul>
@@ -599,19 +599,19 @@ ga('send', 'pageview');
 </ul>
 <p>// Returns a new string made from the receiver by replacing all percent encoded sequences with the matching UTF-8 characters.<br>@property (nullable, readonly, copy) NSString *stringByRemovingPercentEncoding NS_AVAILABLE(10_9, 7_0);</p>
 <ul>
-<li>(nullable NSString *)stringByAddingPercentEscapesUsingEncoding:(NSStringEncoding)enc NS_DEPRECATED(10_0, 10_11, 2_0, 9_0, “Use -stringByAddingPercentEncodingWithAllowedCharacters: instead, which always uses the recommended UTF-8 encoding, and which encodes for a specific URL component or subcomponent since each URL component or subcomponent has different rules for what characters are valid.”);</li>
-<li>(nullable NSString *)stringByReplacingPercentEscapesUsingEncoding:(NSStringEncoding)enc NS_DEPRECATED(10_0, 10_11, 2_0, 9_0, “Use -stringByRemovingPercentEncoding instead, which always uses the recommended UTF-8 encoding.”);</li>
+<li>(nullable NSString *)stringByAddingPercentEscapesUsingEncoding:(NSStringEncoding)enc NS_DEPRECATED(10_0, 10_11, 2_0, 9_0, &#x201C;Use -stringByAddingPercentEncodingWithAllowedCharacters: instead, which always uses the recommended UTF-8 encoding, and which encodes for a specific URL component or subcomponent since each URL component or subcomponent has different rules for what characters are valid.&#x201D;);</li>
+<li>(nullable NSString *)stringByReplacingPercentEscapesUsingEncoding:(NSStringEncoding)enc NS_DEPRECATED(10_0, 10_11, 2_0, 9_0, &#x201C;Use -stringByRemovingPercentEncoding instead, which always uses the recommended UTF-8 encoding.&#x201D;);</li>
 </ul>
 <p>@end</p>
-<p>App 之间Comunication<br>设置<br>plist<br>发送<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">// UIApplication</div><div class="line">- (BOOL)openURL:(NSURL*)url NS_EXTENSION_UNAVAILABLE_IOS(&quot;&quot;);</div><div class="line">- (BOOL)canOpenURL:(NSURL *)url NS_AVAILABLE_IOS(3_0)</div></pre></td></tr></table></figure></p>
-<p>接受<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// UIApplicationDelegate</div><div class="line">- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url NS_DEPRECATED_IOS(2_0, 9_0, &quot;Please use application:openURL:options:&quot;) __TVOS_PROHIBITED;</div><div class="line">- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(id)annotation NS_DEPRECATED_IOS(4_2, 9_0, &quot;Please use application:openURL:options:&quot;) __TVOS_PROHIBITED;</div><div class="line">- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary&lt;NSString*, id&gt; *)options NS_AVAILABLE_IOS(9_0); // no equiv. notification. return NO if the application can&apos;t open for some reason</div></pre></td></tr></table></figure></p>
+<p>App &#x4E4B;&#x95F4;Comunication<br>&#x8BBE;&#x7F6E;<br>plist<br>&#x53D1;&#x9001;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">// UIApplication</div><div class="line">- (BOOL)openURL:(NSURL*)url NS_EXTENSION_UNAVAILABLE_IOS(&quot;&quot;);</div><div class="line">- (BOOL)canOpenURL:(NSURL *)url NS_AVAILABLE_IOS(3_0)</div></pre></td></tr></table></figure></p>
+<p>&#x63A5;&#x53D7;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// UIApplicationDelegate</div><div class="line">- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url NS_DEPRECATED_IOS(2_0, 9_0, &quot;Please use application:openURL:options:&quot;) __TVOS_PROHIBITED;</div><div class="line">- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(id)annotation NS_DEPRECATED_IOS(4_2, 9_0, &quot;Please use application:openURL:options:&quot;) __TVOS_PROHIBITED;</div><div class="line">- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary&lt;NSString*, id&gt; *)options NS_AVAILABLE_IOS(9_0); // no equiv. notification. return NO if the application can&apos;t open for some reason</div></pre></td></tr></table></figure></p>
 <h3 id="refer"><a href="#refer" class="headerlink" title="refer"></a>refer</h3><ul>
 <li><a href="http://iosdevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html" target="_blank" rel="external">http://iosdevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html</a></li>
 <li><a href="https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Inter-AppCommunication/Inter-AppCommunication.html" target="_blank" rel="external">https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Inter-AppCommunication/Inter-AppCommunication.html</a></li>
 </ul>
-<h2 id="Universal-Links"><a href="#Universal-Links" class="headerlink" title="Universal Links"></a>Universal Links</h2><p>设置</p>
-<h2 id="web"><a href="#web" class="headerlink" title="web"></a>web</h2><p>1 创建 apple-app-site-association 配置文件（没有后缀），文件内包含App可以处理的JSON格式URLs设置<br>2 上传 apple-app-site-association 文件至HTTPS服务器<br>3 App完成处理 universal links 编码</p>
-<p>实例<br>{<br>    “applinks”: {<br>        “apps”: [],<br>        “details”: [<br>            {<br>                “appID”: “9JA89QQLNQ.com.apple.wwdc”,<br>                “paths”: [ “/wwdc/news/“, “/videos/wwdc/2015/<em>“]<br>            },<br>            {<br>                “appID”: “TeamID.BundleID2”,<br>                “paths”: [ “</em>“ ]<br>            }<br>        ]<br>    }<br>}</p>
+<h2 id="Universal-Links"><a href="#Universal-Links" class="headerlink" title="Universal Links"></a>Universal Links</h2><p>&#x8BBE;&#x7F6E;</p>
+<h2 id="web"><a href="#web" class="headerlink" title="web"></a>web</h2><p>1 &#x521B;&#x5EFA; apple-app-site-association &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF08;&#x6CA1;&#x6709;&#x540E;&#x7F00;&#xFF09;&#xFF0C;&#x6587;&#x4EF6;&#x5185;&#x5305;&#x542B;App&#x53EF;&#x4EE5;&#x5904;&#x7406;&#x7684;JSON&#x683C;&#x5F0F;URLs&#x8BBE;&#x7F6E;<br>2 &#x4E0A;&#x4F20; apple-app-site-association &#x6587;&#x4EF6;&#x81F3;HTTPS&#x670D;&#x52A1;&#x5668;<br>3 App&#x5B8C;&#x6210;&#x5904;&#x7406; universal links &#x7F16;&#x7801;</p>
+<p>&#x5B9E;&#x4F8B;<br>{<br>    &#x201C;applinks&#x201D;: {<br>        &#x201C;apps&#x201D;: [],<br>        &#x201C;details&#x201D;: [<br>            {<br>                &#x201C;appID&#x201D;: &#x201C;9JA89QQLNQ.com.apple.wwdc&#x201D;,<br>                &#x201C;paths&#x201D;: [ &#x201C;/wwdc/news/&#x201C;, &#x201C;/videos/wwdc/2015/<em>&#x201C;]<br>            },<br>            {<br>                &#x201C;appID&#x201D;: &#x201C;TeamID.BundleID2&#x201D;,<br>                &#x201C;paths&#x201D;: [ &#x201C;</em>&#x201C; ]<br>            }<br>        ]<br>    }<br>}</p>
 <h2 id="App"><a href="#App" class="headerlink" title="App"></a>App</h2><p>Add an entitlement that specifies the domains your app supports.<br>Update your app delegate to respond appropriately when it receives the NSUserActivity object.<br>NSUserActivityTypeBrowsingWeb<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">// Called on the main thread after the NSUserActivity object is available. Use the data you stored in the NSUserActivity object to re-create what the user was doing.</div><div class="line">// You can create/fetch any restorable objects associated with the user activity, and pass them to the restorationHandler. They will then have the UIResponder restoreUserActivityState: method</div><div class="line">// invoked with the user activity. Invoking the restorationHandler is optional. It may be copied and invoked later, and it will bounce to the main thread to complete its work and call</div><div class="line">// restoreUserActivityState on all objects.</div><div class="line">- (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void(^)(NSArray * __nullable restorableObjects))restorationHandler NS_AVAILABLE_IOS(8_0);</div></pre></td></tr></table></figure></p>
 <h2 id="relation"><a href="#relation" class="headerlink" title="relation"></a>relation</h2><p>HandOff<br>Core Spotlight</p>
 <h3 id="refer-1"><a href="#refer-1" class="headerlink" title="refer"></a>refer</h3><ul>
@@ -658,8 +658,8 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>我们都是Github的搬运工，积木</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a>
+        <p>&#x6211;&#x4EEC;&#x90FD;&#x662F;Github&#x7684;&#x642C;&#x8FD0;&#x5DE5;&#xFF0C;&#x79EF;&#x6728;</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2>
         
           <p class="article-more-link">
             <a href="/2016/01/21/dependency/#more">Read More</a>
@@ -705,7 +705,7 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id=""><a href="#" class="headerlink" title=""></a>
+        <h2 id=""><a href="#" class="headerlink" title=""></a></h2>
         
           <p class="article-more-link">
             <a href="/2016/01/20/Project/#more">Read More</a>
@@ -742,7 +742,7 @@ ga('send', 'pageview');
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
+    <h3 class="widget-title">Kategorier</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Dictionary/">Dictionary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/">Tool</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a></li></ul>
     </div>
@@ -771,7 +771,7 @@ ga('send', 'pageview');
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Arkiv</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a></li></ul>
     </div>
@@ -781,7 +781,7 @@ ga('send', 'pageview');
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Siste innlegg</h3>
     <div class="widget">
       <ul>
         

@@ -71,7 +71,7 @@ ga('send', 'pageview');
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Søk"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://puzzlefun.github.io"></form>
@@ -107,17 +107,17 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h2 id="void-load"><a href="#void-load" class="headerlink" title="+ (void)load;"></a>+ (void)load;</h2><p><em>The load message is sent to classes and categories that are both dynamically loaded and statically linked, but only if the newly loaded class or category implements a method that can respond.</em></p>
-<p>+load 函数是由runtime动态加载并且静态链接的，只有在自定义类中重写了才会响应load信息。+load函数的执行时机早于main函数的。在实际的项目开发中运用：</p>
+<p>+load &#x51FD;&#x6570;&#x662F;&#x7531;runtime&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x5E76;&#x4E14;&#x9759;&#x6001;&#x94FE;&#x63A5;&#x7684;&#xFF0C;&#x53EA;&#x6709;&#x5728;&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x4E2D;&#x91CD;&#x5199;&#x4E86;&#x624D;&#x4F1A;&#x54CD;&#x5E94;load&#x4FE1;&#x606F;&#x3002;+load&#x51FD;&#x6570;&#x7684;&#x6267;&#x884C;&#x65F6;&#x673A;&#x65E9;&#x4E8E;main&#x51FD;&#x6570;&#x7684;&#x3002;&#x5728;&#x5B9E;&#x9645;&#x7684;&#x9879;&#x76EE;&#x5F00;&#x53D1;&#x4E2D;&#x8FD0;&#x7528;&#xFF1A;</p>
 <ul>
-<li>初始化一些全局资源</li>
-<li>单例模式</li>
-<li>精简</li>
+<li>&#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E9B;&#x5168;&#x5C40;&#x8D44;&#x6E90;</li>
+<li>&#x5355;&#x4F8B;&#x6A21;&#x5F0F;</li>
+<li>&#x7CBE;&#x7B80;</li>
 </ul>
 <p>- (BOOL)application:(UIApplication <em>)application didFinishLaunchingWithOptions:(NSDictionary </em>)launchOptions</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">+ (void)load</div><div class="line">&#123;</div><div class="line">    @autoreleasepool &#123;</div><div class="line">        __block id observer = [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationDidFinishLaunchingNotification object:nil queue:nil usingBlock:^(NSNotification *note) &#123;</div><div class="line">           //TODO you want add into the didFinishLaunchingWithOptions method</div><div class="line">            [[NSNotificationCenter defaultCenter] removeObserver:observer];</div><div class="line">        &#125;];</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">+ (void)load</div><div class="line">{</div><div class="line">    @autoreleasepool {</div><div class="line">        __block id observer = [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationDidFinishLaunchingNotification object:nil queue:nil usingBlock:^(NSNotification *note) {</div><div class="line">           //TODO you want add into the didFinishLaunchingWithOptions method</div><div class="line">            [[NSNotificationCenter defaultCenter] removeObserver:observer];</div><div class="line">        }];</div><div class="line">    }</div><div class="line">}</div></pre></td></tr></table></figure>
 <h2 id="void-initialize"><a href="#void-initialize" class="headerlink" title="+(void)initialize;"></a>+(void)initialize;</h2><p>&gt;<br><em>initialize it is invoked only once per class. If you want to perform independent initialization for the class and for categories of the class, you should implement load methods.</em></p>
 <h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><p>Unfortunately, a load class method implemented in Swift is never called by the runtime, rendering that recommendation an impossibility.</p>
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><ul>
+<h2 id="&#x5F15;&#x7528;"><a href="#&#x5F15;&#x7528;" class="headerlink" title="&#x5F15;&#x7528;"></a>&#x5F15;&#x7528;</h2><ul>
 <li><a href="http://stackoverflow.com/questions/13326435/nsobject-load-and-initialize-what-do-they-do" target="_blank" rel="external">http://stackoverflow.com/questions/13326435/nsobject-load-and-initialize-what-do-they-do</a></li>
 <li><a href="https://www.mikeash.com/pyblog/friday-qa-2009-05-22-objective-c-class-loading-and-initialization.html" target="_blank" rel="external">https://www.mikeash.com/pyblog/friday-qa-2009-05-22-objective-c-class-loading-and-initialization.html</a></li>
 </ul>
@@ -162,11 +162,11 @@ ga('send', 'pageview');
     
 <nav id="article-nav">
   
-    <a href="/2015/10/15/Apple/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/10/15/iOS-keyword/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Apple device
+          Objective-C&amp;&amp;keyword
         
       </div>
     </a>
@@ -189,7 +189,7 @@ ga('send', 'pageview');
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
+    <h3 class="widget-title">Kategorier</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Dictionary/">Dictionary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/">Tool</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a></li></ul>
     </div>
@@ -218,7 +218,7 @@ ga('send', 'pageview');
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Arkiv</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a></li></ul>
     </div>
@@ -228,7 +228,7 @@ ga('send', 'pageview');
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Siste innlegg</h3>
     <div class="widget">
       <ul>
         
